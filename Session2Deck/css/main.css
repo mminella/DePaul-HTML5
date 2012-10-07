@@ -340,88 +340,66 @@ a:focus {
     white-space: nowrap;
 }
 
-#samplePage h1 {
-	text-shadow: none;
-}
-
-#samplePage .samplePageBody {
-	padding: 10px;
-	background-color: white;
-    border: 1px solid rgba(255, 255, 255, 1);
-    border-radius: 10px;
-	color: black;
-	text-align: left;
-	font: 14px 'IstokWebRegular', Times, serif;
-	text-shadow: none;
-}
-
-#samplePage header h1 {
-	font: bold 24px 'IstokWebRegular', Times, serif;
-	text-align: center;
-}
-
-#samplePage hgroup h2 {
-	font: 20px 'IstokWebRegular', Times, serif;
-	text-align: left;
-}
-
-#samplePage section h1 {
-	font: 18px 'IstokWebRegular', Times, serif;
-}
-#samplePage section header h1 {
-	text-align: left;
-}
-#samplePage nav {
-	border-bottom: 1px solid gray;
-	border-top: 1px solid gray;
-}
-#samplePage footer {
-	border-top: 1px solid gray;
-	text-align: center;
-	display:block;
-	clear:both;
-}
-#samplePage mark {
-	background-color: yellow;
-}
-.samplePageBody div {
-	width: 590px;
-	float: left;
-	padding: 0 10px 0 0 ;
-}
-.samplePageBody aside {
-	width: 190px;
-	float: left;
-}
-
-.samplePageBody:after{
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
-}
-#samplePage figure {
-	border: 1px solid black;
-	float: right;
-	padding: 10px;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, .75);
-}
-#samplePage figure {
-	text-align: center;
-	clear:both;
-	display:block;
-	margin: 0 10px 10px 10px;
-}
-#samplePage article{
-	padding: 10px 0;
+.screenshot {
+    -webkit-transform: rotate(-30deg);
+    -moz-transform:    rotate(-30deg);
+    -ms-transform:     rotate(-30deg);
+    -o-transform:      rotate(-30deg);
+    transform:         rotate(-30deg);
+	width: 600px;
 }
 
 .questions h1 {
 	font-size: 300px;
 }
-
+#boxModel div {
+	text-align: left;
+}
+#boxModel > div{
+	background: #F38700;
+	padding: 0 50px 50px 50px;
+	width: 510px;
+	margin: auto;
+}
+#boxModel > div > div{
+	background: #F3D100;
+	padding: 0 50px 50px 50px;
+	width: 410px;
+}
+#boxModel > div > div > div {
+	background: #3501A6;
+	padding: 0 50px 50px 50px;
+	width: 310px;
+}
+#boxModel > div > div > div > div{
+	background: #015E9B;
+	padding: 0 0 0 10px;
+	margin: 0;
+	width: 300px;
+	height: 70px;
+}
+#content-box {
+	background: white;
+	border: 1px solid black;
+	color: black;
+}
+#content-box > div {
+	width: 50%;
+	border: 20px solid red;
+	float: left;
+	box-sizing: content-box;
+}
+#border-box {
+	background: white;
+	border: 1px solid black;
+	color: black;
+}
+#border-box > div {
+	width: 50%;
+	border: 20px solid red;
+	float: left;
+	box-sizing: border-box;
+}
 /*
     The last step is an overview.
     There is no content in it, so we make sure it's not visible because we want
@@ -596,3 +574,24 @@ a:focus {
 */
 .impress-enabled          { pointer-events: none }
 .impress-enabled #impress { pointer-events: auto }
+
+
+/** Clearfixes */
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}

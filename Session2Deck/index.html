@@ -117,7 +117,6 @@
 
 
 <!--
-	- box-sizing (box model choosing)
 	- nth-child, nth-of-type & nth-last-of-type
 -->
 	<!-- http://www.alistapart.com/articles/prefix-or-posthack/ -->
@@ -191,104 +190,144 @@ background: linear-gradient(#444, #111);
 
 	<!-- http://leaverou.github.com/prefixfree/ -->
     <div class="step" data-x="30000" data-y="0">
-        <h1>-prefix-free</h1>
+		<img class="screenshot" src="./images/-prefix-free.png" alt="-prefix-free"/>
     </div>
 
     <div class="step" data-x="31000" data-y="0">
-        <h1>All examples use -prefix-free</h1>
+        <h1>All examples use<br/>-prefix-free</h1>
     </div>
 
     <div class="step" data-x="32000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Box Model</h1>
     </div>
 
     <div class="step" data-x="33000" data-y="0">
+        <h1>What is box model?</h1>
+    </div>
+
+    <div id="boxModel" class="step" data-x="34000" data-y="0">
+		<div>Margin
+			<div>Border
+				<div>Padding
+					<div>Content</div>
+				</div>
+			</div>
+		</div>
+    </div>
+
+    <div class="step" data-x="35000" data-y="0">
+        <h1>CSS 3 let's you choose</h1>
+    </div>
+
+    <div class="step" data-x="36000" data-y="0">
+        <h1>box-size</h1>
+		<pre>
+			<code class="css">
+box-size: [border-box|content-box|inherit]
+			</code>
+		</pre>
+    </div>
+
+	<!-- the default -->
+    <div class="step" data-x="37000" data-y="0">
+		<h1>content-box</h1>
+		<div id="content-box" class="clearfix">
+			<div>I take up 50%</div>
+			<div>I take up the other 50%</div>
+		</div>
+    </div>
+
+	<!-- the default -->
+    <div class="step" data-x="38000" data-y="0">
+		<h1>content-box</h1>
+		<pre>
+			<code class="css">
+#content-box > div {
+	width: 50%;
+	border: 20px solid red;
+	float: left;
+	box-sizing: content-box;
+}
+			</code>
+		</pre>
+    </div>
+
+    <div class="step" data-x="39000" data-y="0">
+		<h1>border-box</h1>
+		<div id="border-box" class="clearfix">
+			<div>I take up 50%</div>
+			<div>I take up the other 50%</div>
+		</div>
+    </div>
+
+    <div class="step" data-x="40000" data-y="0">
+		<h1>border-box</h1>
+		<pre>
+			<code class="css">
+#border-box > div {
+	width: 50%;
+	border: 20px solid red;
+	float: left;
+	box-sizing: border-box;
+}
+			</code>
+		</pre>
+    </div>
+
+    <div class="step questions" data-x="41000" data-y="0">
+        <h1>?</h1>
+    </div>
+
+    <div class="step" data-x="42000" data-y="0">
+        <h1>Selectors</h1>
+    </div>
+
+    <div class="step" data-x="43000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
+    <div class="step" data-x="44000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
+    <div class="step" data-x="45000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
+    <div class="step" data-x="46000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
+    <div class="step" data-x="47000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
+    <div class="step" data-x="48000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
+    <div class="step" data-x="49000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
+    <div class="step" data-x="50000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
+    <div class="step" data-x="51000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
-    </div>
-
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
-    </div>
-
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
-    </div>
-
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
-    </div>
-
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
-    </div>
-
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
-    </div>
-
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
-    </div>
-
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
-    </div>
-
-    <div class="step" data-x="0" data-y="0">
+    <div class="step" data-x="52000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>
