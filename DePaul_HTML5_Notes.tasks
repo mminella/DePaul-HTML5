@@ -71,31 +71,34 @@ HTML5/CSS3:
 	- History of CSS
 	- What it's used for
 	- Elements
-		- browser prefixes
-		- nth-child, nth-of-type & nth-last-of-type
-		- box-sizing (box model choosing)
-		- multi-column layout (without tables)
-		- Color formats
-		- opacity
-		- Styling new HTML5 elements
-			- video/audio
-			- input elements
-			- discuss semantic elements
-		- @font-face
-		- text-shadow
-		- background
-			- gradient
-			- multiple images
-		- borders
-			- rounded corners
-			- border images
-			- gradient borders
-		- shadows
-			- box and text
-			- regular
-			- lifted corners
+		- low level
+			- browser prefixes
+			- box-sizing (box model choosing)
+			- nth-child, nth-of-type & nth-last-of-type
+		- layout
+			- multi-column layout (without tables)
+		- aesthetics
+			- Color formats
+			- opacity
+			- Styling new HTML5 elements
+				- video/audio
+				- input elements
+				- discuss semantic elements
+				- @font-face
+				- text-shadow
+				- background
+					- gradient
+					- multiple images
+				- borders
+					- rounded corners
+					- border images
+					- gradient borders
+				- shadows
+					- box and text
+					- regular
+					- lifted corners
 		- transformations
-		- animation
+		- animations
 		- media queries
 		- responsive design
 	- Issues with CSS3
