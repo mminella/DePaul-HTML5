@@ -1,0 +1,113 @@
+HTML5/CSS3:
+- HTML
+	- History of HTML
+		- Hypertext Markup Language
+		- Used to connect/associate information
+		- First version of HTML to take a wholistic view of application development
+	- New features
+		- Semantic elements
+		- Audio/Video support
+		- Error Handling
+	- Dropped tags
+		- acronym
+		- applet
+		- dir
+		- isindex
+
+		- frame
+		- frameset
+		- noframes
+
+		- center
+		- font
+		- basefont
+		- big
+		- s
+		- strike
+		- u
+		- tt
+		- xmp
+	- New Tags
+		- Semantic tags
+			- header
+			- nav
+			- section
+			- article
+			- aside
+			- hgroup
+			- figure
+			- figcaption
+			- footer
+			- mark
+		- Content tags
+			- audio
+			- video
+			- embed
+			- canvas
+		- Forms
+			- New types
+				- email
+				- url
+				- tel
+				- number
+				- range
+				- time
+				- date
+				- datetime
+				- datetime-local
+				- week
+				- month
+				- color
+				- search
+			- Attributes
+			- Validation
+	- Error handling
+		- Tells browsers what to do when we break the rules
+	- Issues with new tags
+		- Many are not supported at all or across all browsers
+		- Not all tags can be self closed
+	- Work arounds for old browsers
+- CSS
+	- History of CSS
+	- What it's used for
+	- Elements
+		- browser prefixes
+		- nth-child, nth-of-type & nth-last-of-type
+		- box-sizing (box model choosing)
+		- multi-column layout (without tables)
+		- Color formats
+		- opacity
+		- Styling new HTML5 elements
+			- video/audio
+			- input elements
+			- discuss semantic elements
+		- @font-face
+		- text-shadow
+		- background
+			- gradient
+			- multiple images
+		- borders
+			- rounded corners
+			- border images
+			- gradient borders
+		- shadows
+			- box and text
+			- regular
+			- lifted corners
+		- transformations
+		- animation
+		- media queries
+		- responsive design
+	- Issues with CSS3
+	- Work arounds for old browsers
+- JavaScript APIs
+	- Storage
+	- Drag and Drop
+	- Cross document messaging
+	- Web Sockets
+	
+	
+Notes:
+- http://sylvainw.github.com/HTML5-Future/index_en.html
+- http://www.medikoo.com/asynchronous-javascript/3d/#/asynchronous-javascript
+- http://scottcheng.com/the-revolutionary-css3-impressjs/
