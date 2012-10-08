@@ -76,7 +76,6 @@ HTML5/CSS3:
 			- box-sizing (box model choosing)
 			- nth-child, nth-of-type & nth-last-of-type
 		- layout
-			- flexbox
 			- multi-column layout (without tables)
 		- aesthetics
 			- Color formats

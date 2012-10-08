@@ -400,6 +400,39 @@ a:focus {
 	float: left;
 	box-sizing: border-box;
 }
+#NFC-North {
+	background: white;
+}
+#NFC-North td {
+	font-size: 20px;
+	color: black;
+}
+#NFC-North tr:first-child {
+	background-image: linear-gradient(bottom, gray, white);
+}
+#NFC-North tr:nth-child(2n) {
+	background: #DDD;
+}
+.three-column {
+	font-size: 20px;
+	color: black;
+	border: 1px solid black;
+	background: white;
+	padding: 20px;
+	text-align: left;
+	column-count: 3;
+	column-gap: 30px;
+	column-rule: 1px solid black;
+}
+#opacity {
+	color: black;
+	background: gray;
+	opacity: .2;
+}
+#alpha {
+	color: black;
+	background: rgba(128,128,128,.2);
+}
 /*
     The last step is an overview.
     There is no content in it, so we make sure it's not visible because we want

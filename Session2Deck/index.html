@@ -12,6 +12,7 @@
     <link href="css/main.css" rel="stylesheet" />
     <link href="css/sunburst.css" rel="stylesheet" />
     <link href="css/sampleMenu.css" rel="stylesheet" />
+    <script src="js/prefix.js"></script>
 </head>
 
 <body class="impress-not-supported">
@@ -113,12 +114,6 @@
         <h1>CSS 3 - Lower Level</h1>
     </div>
 
-
-
-
-<!--
-	- nth-child, nth-of-type & nth-last-of-type
--->
 	<!-- http://www.alistapart.com/articles/prefix-or-posthack/ -->
     <div class="step" data-x="20000" data-y="0">
         <h1>Browser Prefixes</h1>
@@ -131,10 +126,10 @@
 
 	<div class="step" data-x="22000" data-y="0">
 		<h1>CSS 1's box model</h1>
-		<ol>
+		<ul>
 			<li>Netscape - Implemented per the spec</li>
 			<li>IE - Implemented the more intuitive include borders approach</li>
-		</ol>
+		</ul>
 	</div>
 
     <div class="step" data-x="23000" data-y="0">
@@ -147,10 +142,10 @@
 
     <div class="step" data-x="25000" data-y="0">
         <h1>Gradients</h1>
-		<ol>
+		<ul>
 			<li>Supported by both webkit and mozilla</li>
 			<li><em>Vastly</em> different syntaxes</li>
-		</ol>
+		</ul>
     </div>
 
     <div class="step" data-x="26000" data-y="0">
@@ -283,136 +278,245 @@ box-size: [border-box|content-box|inherit]
     </div>
 
     <div class="step" data-x="43000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Selectors allow us to target specific elements</h1>
     </div>
 
     <div class="step" data-x="44000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>CSS3 has provided new, useful selectors</h1>
     </div>
 
     <div class="step" data-x="45000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>:nth-child</h1>
     </div>
 
     <div class="step" data-x="46000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+		<h1>:nth-child</h1>
+		<pre>
+			<code class="css">
+tr:nth-child([even|odd|some formula]) {
+	
+}
+			</code>
+		</pre>
     </div>
 
     <div class="step" data-x="47000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>:nth-element</h1>
+		<table id="NFC-North">
+			<tr>
+				<td>Team</td>
+				<td>Points For</td>
+				<td>Points Against</td>
+				<td>Wins</td>
+				<td>Losses</td>
+				<td>Percentage</td>
+			</tr>
+			<tr>
+				<td>Chicago</td>
+				<td>108</td>
+				<td>68</td>
+				<td>3</td>
+				<td>1</td>
+				<td>.750</td>
+			</tr>
+			<tr>
+				<td>Minnesota</td>
+				<td>90</td>
+				<td>72</td>
+				<td>3</td>
+				<td>1</td>
+				<td>.750</td>
+			</tr>
+			<tr>
+				<td>Green Bay</td>
+				<td>112</td>
+				<td>111</td>
+				<td>2</td>
+				<td>3</td>
+				<td>.400</td>
+			</tr>
+			<tr>
+				<td>Detroit</td>
+				<td>100</td>
+				<td>114</td>
+				<td>1</td>
+				<td>3</td>
+				<td>.250</td>
+			</tr>
+		</table>
     </div>
 
+	<!-- an+b-1 siblings before it in the document tree -->
     <div class="step" data-x="48000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+		<h1>:nth-child</h1>
+		<pre>
+			<code class="css">
+#NFC-North tr:nth-child(2n) {
+  background: #DDD;
+}
+			</code>
+		</pre>
     </div>
 
     <div class="step" data-x="49000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+		<h1>:first-child / :last-child</h1>
+		<pre>
+			<code class="css">
+#NFC-North tr:first-child {
+  background-color: gray;
+}
+			</code>
+		</pre>
     </div>
 
     <div class="step" data-x="50000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Other varieties</h1>
+		<pre>
+			<code class="css">
+tr:nth-of-type() / tr:nth-last-of-type()
+tr:first-of-type() / tr:last-of-type()
+:empty()
+			</code>
+		</pre>
     </div>
 
-    <div class="step" data-x="51000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+    <div class="step questions" data-x="51000" data-y="0">
+        <h1>?</h1>
     </div>
 
     <div class="step" data-x="52000" data-y="0">
+        <h1>Layout</h1>
+    </div>
+
+    <div class="step" data-x="53000" data-y="0">
+        <h1>Multicolumn</h1>
+		<p class="three-column">Principal Skinner, I got car sick in your office. D'oh. Hello, I'm Troy McClure! You might remember me from such celebrity funerals as "Andre The Giant, We Hardly Knew Ye" and "Shemp Howard: Today We Mourn A Stooge." Son, a woman is like a beer. They smell good, they look good, you'd step over your own mother just to get one! But you can't stop at one. You wanna drink another woman! What's the point of going out? We're just going to wind up back here anyway. Marge, it takes two to lie. One to lie and one to listen. I've had it with this school, Skinner. Low test scores, class after class of ugly, ugly children... But, Aquaman, you cannot marry a woman without gills. You're from two different worlds... Oh, I've wasted my life. I'm allergic to bee stings. They cause me to, uh, die.</p>
+    </div>
+
+    <div class="step" data-x="54000" data-y="0">
+        <h1>Multicolumn</h1>
+		<pre>
+			<code class="css">
+.three-column {
+  column-count: 3;
+  column-gap: 30px;
+  column-rule: 1px solid black;
+}
+			</code>
+		</pre>
+    </div>
+
+    <div class="step questions" data-x="55000" data-y="0">
+        <h1>?</h1>
+    </div>
+
+    <div class="step" data-x="56000" data-y="0">
+        <h1>Aesthetics</h1>
+    </div>
+	<!--
+	- Styling new HTML5 elements
+		- video/audio
+		- input elements
+		- discuss semantic elements
+		- @font-face
+		- text-shadow
+		- background
+			- gradient
+			- multiple images
+		- borders
+			- rounded corners
+			- border images
+			- gradient borders
+		- shadows
+			- box and text
+			- regular
+			- lifted corners
+ -->
+    <div class="step" data-x="57000" data-y="0">
+        <h1>Areas improved include</h1>
+		<ul>
+			<li>Color formats</li>
+			<li>Opacity</li>
+			<li>Fonts</li>
+			<li>Shadows</li>
+			<li>Backgrouns</li>
+			<li>Borders</li>
+		</ul>
+    </div>
+
+    <div class="step" data-x="58000" data-y="0">
+        <h1>Color Formats</h1>
+    </div>
+
+    <div class="step" data-x="59000" data-y="0">
+        <h1>The old options</h1>
+		<ul>
+			<li>Hex - #RRGGBB</li>
+			<li>Shorthand Hex - #RGB</li>
+			<li>rgb()</li>
+			<li>Named colors - white, black, blue, etc</li>
+		</ul>
+    </div>
+
+    <div class="step" data-x="60000" data-y="0">
+        <h1>The new options</h1>
+		<ul>
+			<li>HSL - Hue, Saturation, Lightness</li>
+			<li>CMYK - Cyan, Magenta, Yellow, Black</li>
+			<li>HSLA - Hue, Saturation, Lightness, Alpha</li>
+			<li>RGBA - Red, Green, Blue, Alpha</li>
+		</ul>
+    </div>
+
+    <div class="step" data-x="61000" data-y="0">
+        <h1>Difference between Apha and Opacity</h1>
+		<div>
+			<div id="opacity">This is what opacity does</div>
+			<div id="alpha">This is what alpha does</div>
+		</div>
+    </div>
+
+    <div class="step" data-x="62000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
+    <div class="step" data-x="63000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
+    <div class="step" data-x="64000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
+    <div class="step" data-x="65000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
+    <div class="step" data-x="66000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
+    <div class="step" data-x="67000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
+    <div class="step" data-x="68000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
+    <div class="step" data-x="69000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
-    </div>
-
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
-    </div>
-
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
-    </div>
-
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
-    </div>
-
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
-    </div>
-
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
-    </div>
-
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
-    </div>
-
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
-    </div>
-
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
-    </div>
-
-    <div class="step" data-x="0" data-y="0">
+    <div class="step" data-x="70000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>
