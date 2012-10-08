@@ -433,6 +433,58 @@ a:focus {
 	color: black;
 	background: rgba(128,128,128,.2);
 }
+.blue_to_red {
+  background-image: linear-gradient(top, blue, red);
+}
+.blue_to_red_with_stops {
+  background-image: linear-gradient(left, blue, red, blue, red);
+}
+.blue_to_red_with_random_stops {
+  background-image: 
+    linear-gradient(left, blue, 
+                    red 10%, blue 90%, red);
+}
+.green_to_yellow {
+  background-image: radial-gradient(green, yellow);
+}
+.green_to_yellow_positioned {
+  background-image: 
+    radial-gradient(75% 10%, green, yellow);
+}
+.CSS3_with_gradiant {
+  color: black;
+  background-image: url(../images/CSS3_Logo_128.png), linear-gradient(top, gray, white);
+  background-repeat: no-repeat;
+}
+.red_button {
+	border: 1px solid black;
+	border-radius: 30px;
+	background-image: linear-gradient(bottom, red, orange);
+	color: white;
+	font-weight: bold;
+}
+.red_button:hover {
+	background-image: linear-gradient(top, red, orange);
+}
+.red_button_variable {
+  border: 1px solid black;
+  border-radius: 30px 50px 70px 30px / 50px 60px 10px 80px;
+  background-image: 
+    linear-gradient(bottom, red, orange);
+  color: white;
+  font-weight: bold;
+}
+.image_border {
+	border-width: 60px 73px 74px 84px;
+	border-image: url(../images/border-image.png) 60 73 74 84 repeat;
+	height: 125px;
+	width: 502px;
+	margin: 0 0 0 100px;
+}
+.gradient_border {
+	border-width: 40px;
+	border-image: linear-gradient(top, blue, red) 40 40 40 40 repeat;
+}
 /*
     The last step is an overview.
     There is no content in it, so we make sure it's not visible because we want

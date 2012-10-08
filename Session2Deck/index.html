@@ -414,23 +414,13 @@ tr:first-of-type() / tr:last-of-type()
         <h1>Aesthetics</h1>
     </div>
 	<!--
-	- Styling new HTML5 elements
-		- video/audio
-		- input elements
-		- discuss semantic elements
-		- @font-face
-		- text-shadow
-		- background
-			- gradient
-			- multiple images
-		- borders
-			- rounded corners
-			- border images
-			- gradient borders
-		- shadows
-			- box and text
-			- regular
-			- lifted corners
+	- shadows
+		- box and text
+		- regular
+	- Status of styling new HTML5 elements
+		- video/audio - not needed
+		- input elements - dicey at best
+		- discuss semantic elements - style like divs
  -->
     <div class="step" data-x="57000" data-y="0">
         <h1>Areas improved include</h1>
@@ -477,111 +467,196 @@ tr:first-of-type() / tr:last-of-type()
     </div>
 
     <div class="step" data-x="62000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Backgrounds</h1>
     </div>
 
     <div class="step" data-x="63000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Gradients</h1>
     </div>
 
     <div class="step" data-x="64000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Linear Gradient</h1>
+		<pre>
+			<code class="css">
+.blue_to_red {
+  background-image: 
+    linear-gradient(top, blue, red);
+}
+			</code>
+		</pre>
+		<div class="blue_to_red">blue_to_red</div>
     </div>
 
     <div class="step" data-x="65000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Linear Gradient With Even Stops</h1>
+		<pre>
+			<code class="css">
+.blue_to_red_with_stops {
+  background-image: 
+    linear-gradient(left, blue, 
+                    red, blue, red);
+}
+			</code>
+		</pre>
+		<div class="blue_to_red_with_stops">blue_to_red_with_stops</div>
     </div>
 
     <div class="step" data-x="66000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Linear Gradient With Stops</h1>
+		<pre>
+			<code class="css">
+.blue_to_red_with_random_stops {
+  background-image: 
+    linear-gradient(left, blue, 
+                    red 10%, blue 90%, red);
+}
+			</code>
+		</pre>
+		<div class="blue_to_red_with_random_stops">blue_to_red_with_random_stops</div>
     </div>
 
     <div class="step" data-x="67000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Radial Gradient Centered</h1>
+		<pre>
+			<code class="css">
+.green_to_yellow {
+  background-image: 
+    radial-gradient(green, yellow);
+}
+			</code>
+		</pre>
+		<div class="green_to_yellow">green_to_yellow</div>
     </div>
 
     <div class="step" data-x="68000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Radial Gradient Positioned</h1>
+		<pre>
+			<code class="css">
+.green_to_yellow_positioned {
+  background-image: 
+    radial-gradient(75% 10%, green, yellow);
+}
+			</code>
+		</pre>
+		<div class="green_to_yellow_positioned">green_to_yellow_positioned</div>
     </div>
 
     <div class="step" data-x="69000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Gradients Are background-image's</h1>
     </div>
 
     <div class="step" data-x="70000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>How do we use a gradient with a background image?</h1>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+    <div class="step" data-x="71000" data-y="0">
+        <h1>background-image</h1>
+		<pre>
+			<code class="css">
+.CSS3_with_gradiant {
+  background-image: 
+    url(../images/CSS3_Logo_512.png),
+    linear-gradient(top, gray, white);
+  background-repeat: no-repeat;
+}
+			</code>
+		</pre>
+		<div class="CSS3_with_gradiant">CSS3_with_gradiant</div>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+    <div class="step" data-x="73000" data-y="0">
+        <h1>Borders</h1>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+    <div class="step" data-x="74000" data-y="0">
+        <h1>border-radius</h1>
+		<pre>
+			<code class="css">
+.red_button {
+  border: 1px solid black;
+  border-radius: 30px;
+  background-image: 
+    linear-gradient(bottom, red, orange);
+  color: white;
+  font-weight: bold;
+}
+			</code>
+		</pre>
+		<div class="red_button">Save</div>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+    <div class="step" data-x="75000" data-y="0">
+        <h1>Multiple Radii</h1>
+		<pre>
+			<code class="css">
+.red_button_variable {
+  border: 1px solid black;
+  border-radius: 30px 50px 70px 30px / 
+    50px 60px 10px 80px;
+  background-image: 
+    linear-gradient(bottom, red, orange);
+  color: white;
+  font-weight: bold;
+}
+			</code>
+		</pre>
+		<div class="red_button_variable">Save</div>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+	<!-- http://css-tricks.com/understanding-border-image/ -->
+	<!-- http://border-image.com -->
+    <div class="step" data-x="76000" data-y="0">
+        <h1>border-image</h1>
+		<p>A property to be able to wrap an element with an image</p>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+    <div class="step" data-x="77000" data-y="0">
+		<img src="./images/border-image.png">
     </div>
 
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+    <div class="step" data-x="78000" data-y="0">
+		<div class="image_border">This is my content with a pretty border</div>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+    <div class="step" data-x="79000" data-y="0">
+        <h1>border-image</h1>
+		<pre>
+			<code class="css">
+.image_border {
+  border-width: 60px 73px 74px 84px;
+  border-image: 
+    url(../images/border-image.png) 
+    60 73 74 84 repeat;
+  height: 125px;
+  width: 502px;
+}
+			</code>
+		</pre>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+    <div class="step" data-x="80000" data-y="0">
+        <h1>Border Gradients</h1>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+    <div class="step" data-x="81000" data-y="0">
+		<div class="gradient_border">This has a gradient border</div>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+    <div class="step" data-x="82000" data-y="0">
+        <h1>border-image</h1>
+		<pre>
+			<code class="css">
+.gradient_border {
+  border-width: 40px;
+  border-image: 
+    linear-gradient(top, blue, red) 
+                    40 40 40 40 repeat;
+}
+			</code>
+		</pre>
     </div>
 
-    <div class="step" data-x="0" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
-    </div>
-
-    <div class="step" data-x="0" data-y="0">
+    <div class="step" data-x="83000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>

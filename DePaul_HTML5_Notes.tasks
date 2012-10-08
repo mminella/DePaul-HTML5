@@ -81,10 +81,9 @@ HTML5/CSS3:
 			- Color formats
 			- opacity
 			- Styling new HTML5 elements
-				- video/audio
-				- input elements
-				- discuss semantic elements
-				- @font-face
+				- video/audio - not needed
+				- input elements - dicey at best
+				- discuss semantic elements - like divs
 				- text-shadow
 				- background
 					- gradient
@@ -96,7 +95,6 @@ HTML5/CSS3:
 				- shadows
 					- box and text
 					- regular
-					- lifted corners
 		- transformations
 		- animations
 		- media queries
