@@ -110,6 +110,10 @@
         <h1>?</h1>
     </div>
 
+    <div class="step note" data-x="18000" data-y="0">
+        <h1>Note: IE8 and less will not support what is in this deck.</h1>
+    </div>
+
     <div class="step" data-x="19000" data-y="0">
         <h1>CSS 3 - Lower Level</h1>
     </div>
@@ -413,15 +417,7 @@ tr:first-of-type() / tr:last-of-type()
     <div class="step" data-x="56000" data-y="0">
         <h1>Aesthetics</h1>
     </div>
-	<!--
-	- shadows
-		- box and text
-		- regular
-	- Status of styling new HTML5 elements
-		- video/audio - not needed
-		- input elements - dicey at best
-		- discuss semantic elements - style like divs
- -->
+
     <div class="step" data-x="57000" data-y="0">
         <h1>Areas improved include</h1>
 		<ul>
@@ -657,6 +653,470 @@ tr:first-of-type() / tr:last-of-type()
     </div>
 
     <div class="step" data-x="83000" data-y="0">
+        <h1>Shadows</h1>
+    </div>
+
+    <div class="step" data-x="84000" data-y="0">
+        <h1>box-shadow</h1>
+		<pre>
+			<code class="css">
+.regular_shadow {
+  box-shadow: horizontal-offset 
+    vertical-offset blur-radius 
+    spread-radius color;
+}
+			</code>
+		</pre>
+		<div class="regular_shadow">Shadows!</div>
+    </div>
+
+    <div class="step" data-x="85000" data-y="0">
+        <h1>inset</h1>
+		<pre>
+			<code class="css">
+.inset_shadow {
+  box-shadow: inset 10px 10px 10px 0px #000;
+}
+			</code>
+		</pre>
+		<div class="inset_shadow">Shadows!</div>
+    </div>
+
+    <div class="step" data-x="86000" data-y="0">
+        <h1>Text Shadows</h1>
+		<pre>
+			<code class="css">
+text-shadow: 10px 10px 10px black;
+			</code>
+		</pre>
+    </div>
+
+    <div class="step questions" data-x="87000" data-y="0">
+        <h1>?</h1>
+    </div>
+
+    <div class="step" data-x="88000" data-y="0">
+        <h1>What about the new elements?</h1>
+    </div>
+
+    <div class="step" data-x="89000" data-y="0">
+        <h1>Semantic Elements</h1>
+		<p>Style just like &lt;div&gt;</p>
+    </div>
+
+    <div class="step" data-x="90000" data-y="0">
+        <h1>&lt;audio&gt; & &lt;video&gt;</h1>
+		<p>You don't style the controls.  You create new ones with javascript.</p>
+    </div>
+
+    <div class="step" data-x="91000" data-y="0">
+        <h1>Input Elements</h1>
+    </div>
+
+    <div class="step questions" data-x="92000" data-y="0">
+        <h1>?</h1>
+    </div>
+
+    <div class="step" data-x="93000" data-y="0">
+        <h1>Transformations</h1>
+    </div>
+
+    <div class="step" data-x="95000" data-y="0">
+		<h1>translate()</h1>
+		<div class="showup">I wrap the red div<div id="translate_me">I've been moved</div></div>
+    </div>
+
+    <div class="step" data-x="96000" data-y="0">
+		<h1>translate()</h1>
+		<pre>
+			<code class="css">
+#translate_me {
+	border: 1px solid black;
+	background: red;
+	transform: translate(150px, 200px);
+}
+			</code>
+		</pre>
+    </div>
+
+    <div class="step" data-x="97000" data-y="0">
+        <h1>rotate()</h1>
+		<pre>
+			<code class="css">
+.rotate_20 {
+	border: 1px solid black;
+	background: red;
+	transform: rotate(20deg);
+}
+			</code>
+		</pre>
+		<div class="rotate_20">I've been rotated</div>
+    </div>
+
+    <div class="step" data-x="98000" data-y="0">
+        <h1>scale()</h1>
+		<pre>
+			<code class="css">
+.scale {
+	border: 1px solid black;
+	background: red;
+	transform: scale(.3);
+}
+			</code>
+		</pre>
+		<div class="scale">Honey, I've shrunk the &lt;div&gt;!</div>
+    </div>
+
+    <div class="step" data-x="99000" data-y="0">
+        <h1>skew()</h1>
+		<pre>
+			<code class="css">
+.skew {
+	border: 1px solid black;
+	background: red;
+	transform: skew(20deg 30deg);
+}
+			</code>
+		</pre>
+		<div class="skew">Skewed...</div>
+    </div>
+
+    <div class="step" data-x="100000" data-y="0">
+        <h1>Multiple Transformations</h1>
+		<pre>
+			<code class="css">
+.skew_scale {
+  border: 1px solid black;
+  background: red;
+  transform:  scale(.3) skew(20deg, 30deg);
+}
+			</code>
+		</pre>
+		<div class="skew_scale">Skewed and scaled</div>
+    </div>
+
+    <div class="step" data-x="101000" data-y="0">
+        <h1>That's the 2D transformations.</h1>
+    </div>
+
+    <div class="step" data-x="102000" data-y="0">
+        <h1>There are 3D transformations defined...</h1>
+    </div>
+
+    <div class="step" data-x="103000" data-y="0">
+        <h1>...but no browsers support them.</h1>
+    </div>
+
+    <div class="step questions" data-x="104000" data-y="0">
+        <h1>?</h1>
+    </div>
+
+    <div class="step" data-x="105000" data-y="0">
+        <h1>Animation</h1>
+    </div>
+
+    <div class="step" data-x="106000" data-y="0">
+        <h1>transition</h1>
+		<pre>
+			<code class="css">
+.animated_skew_scale:hover {
+  border: 1px solid black;
+  background: red;
+  transform:  scale(.3) skew(20deg, 30deg);
+  transition: transformation duration 
+    timing-function;
+}
+			</code>
+		</pre>
+		<div class="animated_skew_scale">Skewed and scaled</div>
+    </div>
+
+    <div class="step" data-x="107000" data-y="0">
+		<h1>Timing Functions</h1>
+		<div id="timing">
+			<div id="linear">Linear</div>
+			<div id="ease">Ease</div>
+			<div id="ease-in">Ease-in</div>
+			<div id="ease-in-out">Ease-in-out</div>
+			<div id="cubic">Cubic-bezier</div>
+		</div>
+    </div>
+
+    <div class="step" data-x="108000" data-y="0">
+		<h1>Timing Delays</h1>
+		<div id="delays">#delays
+			<div class="changing">.changing</div>
+		</div>
+    </div>
+
+    <div class="step" data-x="109000" data-y="0">
+        <h1>Timing Delays</h1>
+		<pre>
+			<code class="css">
+#delays:hover > div{
+  background: yellow;
+  transform: translate(200px, 100px) 
+    rotate(1080deg);
+  transition: transform 2s ease-in-out, 
+    background 1s linear;
+  transition-delay: 0s, 2s;
+}
+			</code>
+		</pre>
+    </div>
+
+    <div class="step questions" data-x="110000" data-y="0">
+        <h1>?</h1>
+    </div>
+
+    <div class="step" data-x="111000" data-y="0">
+        <h1>Media Queries</h1>
+    </div>
+
+    <div class="step" data-x="112000" data-y="0">
+        <h1>CSS2 gave us the ability to conditionally add style sheets</h1>
+    </div>
+
+    <div class="step" data-x="113000" data-y="0">
+        <h1>CSS3 takes it to the next level</h1>
+    </div>
+
+    <div class="step" data-x="114000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="115000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="116000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="117000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="118000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="119000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="120000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="121000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="122000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="123000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="124000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="125000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="126000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="127000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="128000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="129000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="130000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="131000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="132000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="133000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="134000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="135000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="136000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="137000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="138000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="139000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="140000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="141000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="142000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="143000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="144000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="145000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="146000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="147000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="148000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="149000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="150000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="151000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="152000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="153000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="154000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="155000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="156000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="157000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="158000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="159000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="160000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step" data-x="161000" data-y="0">
         <h1>HTML5 and CSS3</h1>
 		<h2>Standards <em>finally</em> catch up</h2>
     </div>

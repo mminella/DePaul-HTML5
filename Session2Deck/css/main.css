@@ -352,6 +352,9 @@ a:focus {
 .questions h1 {
 	font-size: 300px;
 }
+.note h1 {
+	color: red;
+}
 #boxModel div {
 	text-align: left;
 }
@@ -484,6 +487,114 @@ a:focus {
 .gradient_border {
 	border-width: 40px;
 	border-image: linear-gradient(top, blue, red) 40 40 40 40 repeat;
+}
+.regular_shadow {
+  border: 1px solid black;
+  background: white;
+  color: black;
+  box-shadow: 10px 10px 10px #000;
+}
+.inset_shadow {
+  background: white;
+  color: black;
+  box-shadow: inset 10px 10px 10px 0px #000;
+}
+#translate_me {
+	border: 1px solid black;
+	background: red;
+	width: 300px;
+	transform: translate(150px, 200px);
+}
+.showup {
+	background: white;
+	color: black;
+	border: 1px solid black;
+}
+.rotate_20 {
+	border: 1px solid black;
+	background: red;
+	width: 300px;
+	transform: rotate(20deg);
+	margin: 10px auto;
+}
+.scale {
+	border: 1px solid black;
+	background: red;
+	transform: scale(.3);
+}
+.skew {
+	border: 1px solid black;
+	background: red;
+	width: 300px;
+	transform: skew(20deg, 30deg);
+	margin: 10px auto;
+}
+.skew_scale {
+	border: 1px solid black;
+	background: red;
+	transform:  scale(.3) skew(20deg, 30deg);
+}
+.animated_skew_scale:hover {
+  border: 1px solid black;
+  background: red;
+  transform:  scale(.3) skew(20deg, 30deg);
+  transition: all 1s ease-in-out;
+}
+#timing > div {
+  width: 200px;
+  float: left;	
+  border: 1px solid black;
+  background: white;
+  color: black;
+}
+#linear:hover {
+  background: red;
+  transform:  scale(.3) rotate(1080deg);
+  transition: background 2s linear, transform 2s linear;
+}
+#ease:hover {
+  background: yellow;
+  transform:  scale(.3) rotate(1080deg);
+  transition: all 2s ease;
+}
+#ease-in:hover {
+  background: blue;
+  transform:  scale(.3) rotate(1080deg);
+  transition: all 2s ease-in;
+}
+#ease-in-out:hover {
+  background: green;
+  transform:  scale(.3) rotate(1080deg);
+  transition: all 2s ease-in-out;
+}
+#cubic:hover {
+  background: purple;
+  transform:  scale(.3) rotate(1080deg);
+  transition: all 2s cubic-bezier(.2, .4, .6, .8);
+}
+#delays {
+	font-size: 14px;
+	border: 1px solid black;
+	background: white;
+	color: black;
+	margin: 40px auto;
+	text-align: left;
+	width: 400px;
+	height: 330px;
+	padding: 10px;
+}
+.changing {
+	border: 1px solid black;
+	background: red;
+	color: white;
+	width: 200px;
+	height: 200px;
+}
+#delays:hover > div{
+	background: yellow;
+	transform: translate(200px, 100px) rotate(1080deg);
+	transition: transform 2s ease-in-out, background 1s linear;
+	transition-delay: 0s, 2s;
 }
 /*
     The last step is an overview.
