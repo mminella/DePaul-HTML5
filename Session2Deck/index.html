@@ -13,6 +13,10 @@
     <link href="css/sunburst.css" rel="stylesheet" />
     <link href="css/sampleMenu.css" rel="stylesheet" />
     <script src="js/prefix.js"></script>
+	<script src="js/highlight.pack.js"></script>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
 </head>
 
 <body class="impress-not-supported">
@@ -298,7 +302,7 @@ box-size: [border-box|content-box|inherit]
 		<pre>
 			<code class="css">
 tr:nth-child([even|odd|some formula]) {
-	
+	/* Put styles here */
 }
 			</code>
 		</pre>
@@ -425,7 +429,7 @@ tr:first-of-type() / tr:last-of-type()
 			<li>Opacity</li>
 			<li>Fonts</li>
 			<li>Shadows</li>
-			<li>Backgrouns</li>
+			<li>Backgrounds</li>
 			<li>Borders</li>
 		</ul>
     </div>
@@ -462,8 +466,35 @@ tr:first-of-type() / tr:last-of-type()
 		</div>
     </div>
 
+    <div class="step" data-x="61000" data-y="0">
+        <h1>@font-face</h1>
+		<p>Not really new (been around since IE version 5)</p>
+    </div>
+
+    <div class="step" data-x="61000" data-y="0">
+        <h1>@font-face</h1>
+		<p>What is new is the ability to use openly licensed fonts</p>
+    </div>
+
+    <div class="step note" data-x="61000" data-y="0">
+        <h1>Note: You must use web fonts!</h1>
+    </div>
+
     <div class="step" data-x="62000" data-y="0">
-        <h1>Backgrounds</h1>
+        <h1>@font-face</h1>
+		<pre>
+			<code class="css">
+@font-face {
+  font-family: 'FFFTusjBold';
+  src: url('FFF_Tusj.eot') format('eot'), 
+     url('FFF_Tusj.woff') format('woff'), 
+     url('FFF_Tusj.ttf') format('truetype');
+}
+#myElement {
+  font: bold 10px 'FFFTusjBold', sans-serif;
+}
+			</code>
+		</pre>
     </div>
 
     <div class="step" data-x="63000" data-y="0">
@@ -882,88 +913,130 @@ text-shadow: 10px 10px 10px black;
     </div>
 
     <div class="step" data-x="114000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Two different uses for media queries</h1>
     </div>
 
     <div class="step" data-x="115000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Linking a style sheet based on media</h1>
     </div>
 
     <div class="step" data-x="116000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Applying a style based on media</h1>
     </div>
 
     <div class="step" data-x="117000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Linking based on media</h1>
     </div>
 
     <div class="step" data-x="118000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>&lt;link&gt;</h1>
+		<pre>
+			<code class="html">
+&lt;link rel="stylesheet" type="text/css" 
+  media="max-device-width: 480px" 
+  href="mobile-device.css" /&gt;
+			</code>
+		</pre>
     </div>
 
     <div class="step" data-x="119000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Attributes to query by</h1>
+		<ul>
+			<li>Height/width of device</li>
+			<li>Height/width of browser</li>
+			<li>Screen resolution</li>
+			<li>Orientation of device (landscape or portrait)</li>
+			<li>Media (screen vs print)</li>
+		</ul>
     </div>
 
     <div class="step" data-x="120000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Device Size</h1>
+		<pre>
+			<code class="html">
+&lt;link media="min-device-width: 600px"/&gt;
+&lt;link media="max-device-width: 800px"/&gt;
+			</code>
+		</pre>
     </div>
 
     <div class="step" data-x="121000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Window Size</h1>
+		<pre>
+			<code class="html">
+&lt;link media="min-width: 600px"/&gt;
+&lt;link media="max-width: 800px"/&gt;
+			</code>
+		</pre>
     </div>
 
     <div class="step" data-x="122000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Resolution</h1>
+		<pre>
+			<code class="html">
+&lt;link media="resolution: 240dpi"/&gt;
+			</code>
+		</pre>
     </div>
 
     <div class="step" data-x="123000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Device Orientation</h1>
+		<pre>
+			<code class="html">
+&lt;link media="orientation : portrait"/&gt;
+			</code>
+		</pre>
     </div>
 
     <div class="step" data-x="124000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Media</h1>
+		<pre>
+			<code class="html">
+&lt;link media="only screen"/&gt;
+&lt;link media="only print"/&gt;
+			</code>
+		</pre>
     </div>
 
     <div class="step" data-x="125000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Combining Queries</h1>
+		<pre>
+			<code class="html">
+&lt;link 
+  media="only screen and (min-width: 600px)"/&gt;
+&lt;link 
+  media="orientation:portrait and (min-width:320px)"/&gt;
+			</code>
+		</pre>
     </div>
 
     <div class="step" data-x="126000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Media Queries in CSS</h1>
+		<pre>
+			<code class="html">
+@media only screen and
+ (min-device-width: 600px) {
+    /* Place styles here */
+}
+			</code>
+		</pre>
     </div>
 
-    <div class="step" data-x="127000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+    <div class="step questions" data-x="127000" data-y="0">
+        <h1>?</h1>
     </div>
 
     <div class="step" data-x="128000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>Mobile Web</h1>
     </div>
 
+	<!-- http://tag.microsoft.com/community/blog/t/the_growth_of_mobile_marketing_and_tagging.aspx -->
     <div class="step" data-x="129000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>In 2014, mobile traffic surpasses desktop</h1>
     </div>
 
     <div class="step" data-x="130000" data-y="0">
-        <h1>HTML5 and CSS3</h1>
-		<h2>Standards <em>finally</em> catch up</h2>
+        <h1>75% of mobile users will only wait 5 seconds for a page to load.</h1>
     </div>
 
     <div class="step" data-x="131000" data-y="0">
@@ -1140,10 +1213,8 @@ if ("ontouchstart" in document.documentElement) {
 </script>
 
 <script src="js/impress.js"></script>
-<script src="js/highlight.pack.js"></script>
 <script>
 	impress().init();
-  	hljs.initHighlightingOnLoad();
 </script>
 
 </body>
