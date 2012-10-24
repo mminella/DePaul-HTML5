@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+		<style>
+			.red {
+				background-color: red;
+			}
+			.blue {
+				background-color: blue;
+			}
+			.green {
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="clickResponder" style="height: 100px;width: 100px;border: 1px solid black; border-radius: 5px;">&nbsp;</div>
+		<a id="clickMeButton" href="#">Click Me</a>
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+		  var socket = io.connect('http://localhost');
+		  var classes = ['red', 'blue', 'green'];
+		  var curClass = '';
+		  var clickResponder = document.getElementById("clickResponder");
+		
+		  socket.on('clickHappened', function (data) {
+			console.log(data);
+			
+			if(curClass != '') {
+				clickResponder.classList.remove(curClass);
+			}
+			
+			curClass = classes[Math.floor(Math.random() * classes.length)];
+			clickResponder.classList.add(curClass);
+		  });
+		
+		  document.getElementById("clickMeButton").addEventListener("click", function(e) {
+			socket.emit("clickHappened", {my: 'data'});
+		  });
+		</script>
+	</body>
+</html>

@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>HTML5/CSS3 from DePaul University</title>
+    
+    <meta name="description" content="HTML5 and CSS3 are the latest in web development standards." />
+    <meta name="author" content="Michael T Minella" />
+
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/sunburst.css" rel="stylesheet" />
+    <link href="css/sampleMenu.css" rel="stylesheet" />
+    <script src="js/modernizer-2.6.1.min.js"></script>
+    <script src="js/prefix.js"></script>
+	<script src="js/highlight.pack.js"></script>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Seriously?  This is a presentation on HTML5/CSS3 and you aren't using a modern browser?</p>
+	<p>Please upgrade to either <em>Safari</em>, <em>Chrome</em>, or <em>Firefox</em></p>
+</div>
+
+<div id="impress">
+
+    <div class="step" data-x="-1000" data-y="0">
+        <h1>HTML5 and CSS3</h1>
+		<h2>Standards <em>finally</em> catch up</h2>
+    </div>
+
+    <div class="step questions" data-x="0" data-y="0">
+		<h1>?</h1>
+    </div>
+
+	<div class="step" data-x="1000" data-y="0">
+		<h1>Review</h1>
+	</div>
+
+	<div class="step" data-x="2000" data-y="0">
+		<h1>History of CSS</h1>
+	</div>
+
+	<div class="step" data-x="3000" data-y="0">
+		<h1>Lower Level CSS</h1>
+	</div>
+
+	<div class="step" data-x="4000" data-y="0">
+		<h1>Layout</h1>
+	</div>
+
+	<div class="step" data-x="5000" data-y="0">
+		<h1>Aesthetics</h1>
+	</div>
+
+	<div class="step" data-x="6000" data-y="0">
+		<h1>Transformations</h1>
+	</div>
+
+	<div class="step" data-x="7000" data-y="0">
+		<h1>Media Queries</h1>
+	</div>
+
+	<div class="step" data-x="8000" data-y="0">
+		<h1>Responsive Design</h1>
+	</div>
+
+	<div class="step questions" data-x="9000" data-y="0">
+		<h1>?</h1>
+	</div>
+
+	<div class="step" data-x="9000" data-y="1000" data-rotate="90">
+		<h1>Agenda</h1>
+	</div>
+
+	<div class="step" data-x="9000" data-y="2000" data-rotate="90">
+		<h1>Drag and Drop</h1>
+	</div>
+
+	<div class="step" data-x="9000" data-y="3000" data-rotate="90">
+		<h1>Geolocation</h1>
+	</div>
+
+	<div class="step" data-x="9000" data-y="4000" data-rotate="90">
+		<h1>Storage</h1>
+	</div>
+
+	<div class="step" data-x="9000" data-y="5000" data-rotate="90">
+		<h1>Web Workers</h1>
+	</div>
+
+	<div class="step" data-x="9000" data-y="6000" data-rotate="90">
+		<h1>Messaging</h1>
+	</div>
+
+	<div class="step" data-x="9000" data-y="7000" data-rotate="90">
+		<h1>Web Sockets</h1>
+	</div>
+
+	<div class="step" data-x="8000" data-y="7000" data-rotate="180">
+		<h1>Drag and Drop</h1>
+	</div>
+
+	<div class="step" data-x="7000" data-y="7000" data-rotate="180">
+		<h1>Common on desktops</h1>
+	</div>
+
+	<div class="step" data-x="6000" data-y="7000" data-rotate="180">
+		<h1>Difficult to implement in the browser</h1>
+	</div>
+
+	<div class="step" data-x="5000" data-y="7000" data-rotate="180">
+		<h1>JavaScript APIs</h1>
+	</div>
+
+	<div class="step" data-x="4000" data-y="7000" data-rotate="180">
+		<h1>HTML5 brings drag and drop to the browser</h1>
+	</div>
+
+	<div class="step" data-x="3000" data-y="7000" data-rotate="180">
+		<h1>Making elements draggable</h1>
+	</div>
+
+	<div class="step" data-x="2000" data-y="7000" data-rotate="180">
+		<h1>Draggable</h1>
+		<pre>
+			<code class="html">
+&lt;div id="firstDragable" draggable="true"&gt;
+  &lt;header&gt;I am draggable&lt;/header&gt;
+&lt;/div&gt;
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="1000" data-y="7000" data-rotate="180">
+		<h1>Note: It can help to make draggable elements not selectable</h1>
+	</div>
+
+	<div class="step" data-x="0" data-y="7000" data-rotate="180">
+		<h1>Drag Events</h1>
+		<ul>
+			<li>dragstart</li>
+			<li>drag</li>
+			<li>dragenter</li>
+			<li>dragleave</li>
+			<li>dragover</li>
+			<li>drop</li>
+			<li>dragend</li>
+		</ul>
+	</div>
+
+	<div class="step" data-x="-1000" data-y="7000" data-rotate="180">
+		<a href="./draganddrop.html" target="blank">Example</a>
+	</div>
+
+	<div class="step questions" data-x="-2000" data-y="7000" data-rotate="180">
+		<h1>?</h1>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="6000" data-rotate="270">
+		<h1>Geolocation</h1>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="5000" data-rotate="270">
+		<h1>Allows the client to be located geographically</h1>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="4000" data-rotate="270">
+		<h1>navigator object</h1>
+		<pre>
+			<code class="javascript">
+navigator.geolocation.getCurrentPosition(
+  function(position) {
+    alert("You are located at:\n" + 
+      "Lat:" + position.coords.latitude + 
+      "\nLong:" + position.coords.longitude);
+});
+			</code>
+		</pre>
+		<a href="javascript:alertLocation();">Where am I?</a>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="3000" data-rotate="270">
+		<h1>Other methods</h1>
+		<pre>
+			<code class="javascript">
+var location = navigator.geolocation;
+
+// Call a function as position changes
+location.watchPosition(callFunction);
+
+// Stop the previously set watchPosition
+location.clearWatch();
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="2000" data-rotate="270">
+		<h1>Position Object</h1>
+		<pre>
+			<code class="javascript">
+// Timestamp of the result
+position.timestamp;
+
+// A Coordinates object
+position.coords;
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="1000" data-rotate="270">
+		<h1>Coordinates Object</h1>
+		<pre>
+			<code class="javascript">
+coords.latitude;
+coords.longitude;
+coords.altitude;
+coords.accuracy;
+coords.altitudeAccuracy;
+coords.heading;
+coords.speed;
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="0" data-rotate="270">
+		<h1>So we can know where any client is, right?</h1>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="-1000" data-rotate="270">
+		<h1>Wrong</h1>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="-2000" data-rotate="270">
+		<h1>Users need to grant permission</h1>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="-3000" data-rotate="270">
+		<h1>What happens when they don't?</h1>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="-4000" data-rotate="270">
+		<h1>Two options:</h1>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="-5000" data-rotate="270">
+		<h1>Send a default from the server</h1>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="-6000" data-rotate="270">
+		<h1>Handle it in the browser</h1>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="-7000" data-rotate="270">
+		<h1>Handling errors</h1>
+		<pre>
+			<code class="javascript">
+switch(error.code) {
+  case error.PERMISSION_DENIED:
+    alert("Permission was denied");
+  case error.POSITION_UNAVAILABLE:
+    alert("Unknown location");
+  case error.TIMEOUT:
+    alert("Timeout");
+  case error.UNKNOWN_ERROR:
+    alert("Unknown error");
+}
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="-8000" data-rotate="270">
+		<h1>Using error code</h1>
+		<pre>
+			<code class="javascript">
+var nav = navigator.geolocation;
+
+nav.getCurrentPosition(displayPosition, 
+                       displayError);
+			</code>
+		</pre>
+	</div>
+
+	<div class="step questions" data-x="-2000" data-y="-9000" data-rotate="270">
+		<h1>?</h1>
+	</div>
+
+	<div class="step" data-x="-1000" data-y="-9000" data-rotate="360">
+		<h1>Storage</h1>
+	</div>
+
+	<div class="step" data-x="0" data-y="-9000" data-rotate="360">
+		<h1>Cookies</h1>
+		<img style="width: 300px;margin: 30px auto;" src="./images/cookie.png"/>
+	</div>
+
+	<div class="step" data-x="1000" data-y="-9000" data-rotate="360">
+		<h1>HTML5 provides better options</h1>
+	</div>
+
+	<div class="step" data-x="2000" data-y="-9000" data-rotate="360">
+		<h1>Data Attributes</h1>
+	</div>
+
+	<div class="step" data-x="3000" data-y="-9000" data-rotate="360">
+		<h1>Local Storage</h1>
+	</div>
+
+	<div class="step" data-x="4000" data-y="-9000" data-rotate="360">
+		<h1>File System</h1>
+	</div>
+
+	<div class="step" data-x="5000" data-y="-9000" data-rotate="360">
+		<h1>Indexed DB</h1>
+	</div>
+
+	<div class="step" data-x="5000" data-y="-9000" data-z="1000" data-rotate="450">
+		<h1>Data Attributes</h1>
+	</div>
+
+	<div class="step" data-x="5000" data-y="-8000" data-z="1000" data-rotate="450">
+		<h1>HTML supports a number of attributes</h1>
+	</div>
+
+	<div class="step" data-x="5000" data-y="-7000" data-z="1000" data-rotate="450">
+		<h1>Data attributes allow you to add your own</h1>
+	</div>
+
+	<div class="step" data-x="5000" data-y="-6000" data-z="1000" data-rotate="450">
+		<h1>Data Attributes</h1>
+		<pre>
+			<code class="html">
+&ltimg id="myImage" 
+     src="./images/drivein1.jpg"
+     data-photographer="Michael T Minella"/&gt;
+			</code>
+		</pre>
+		<img id="myImage" src="./images/drivein1.jpg" style="width: 200px" data-photographer="NoMA Drive-In"/>
+	</div>
+
+	<div class="step" data-x="5000" data-y="-5000" data-z="1000" data-rotate="450">
+		<h1>data- prefix</h1>
+	</div>
+
+	<div class="step" data-x="5000" data-y="-4000" data-z="1000" data-rotate="450">
+		<h1>Access</h1>
+		<pre>
+			<code class="javascript">
+var img = 
+  document.getElementById("myImage");
+
+alert(
+  img.getAttribute("data-photographer"));
+			</code>
+		</pre>
+		<a href="javascript:displayViaAttribute();">Display Data</a>
+	</div>
+
+	<div class="step" data-x="5000" data-y="-3000" data-z="1000" data-rotate="450">
+		<h1>Access cont.</h1>
+		<pre>
+			<code class="javascript">
+var img = 
+  document.getElementById("myImage");
+
+alert(
+  img.dataset.photographer);
+			</code>
+		</pre>
+		<a href="javascript:displayViaDataset();">Display Data</a>
+	</div>
+
+	<div class="step" data-x="5000" data-y="-2000" data-z="1000" data-rotate="450">
+		<h1>Setting Attributes</h1>
+		<pre>
+			<code class="javascript">
+var img = 
+  document.getElementById("myImage");
+
+img.setAttribute("data-class", "HTML5");
+img.dataset.instructor = "Michael Minella";
+
+alert("Class:" + img.dataset.class + "\n" +
+   "Instructor: " + img.dataset.instructor);
+			</code>
+		</pre>
+		<a href="javascript:setDataAttributes();">Set Attributes</a>
+	</div>
+
+	<div class="step questions" data-x="5000" data-y="-1000" data-z="1000" data-rotate="450">
+		<h1>?</h1>
+	</div>
+
+	<div class="step" data-x="4000" data-y="-1000" data-z="1000" data-rotate="540">
+		<h1>Local Storage</h1>
+	</div>
+
+	<div class="step" data-x="3000" data-y="-1000" data-z="1000" data-rotate="540">
+		<h1>localStorage vs<br/>sessionStorage</h1>
+	</div>
+
+	<div class="step" data-x="2000" data-y="-1000" data-z="1000" data-rotate="540">
+		<h1>Both are key/value pairs</h1>
+	</div>
+
+	<div class="step" data-x="1000" data-y="-1000" data-z="1000" data-rotate="540">
+		<h1>localStorage has no expiration</h1>
+	</div>
+
+	<div class="step" data-x="0" data-y="-1000" data-z="1000" data-rotate="540">
+		<h1>sessionStorage expires</h1>
+	</div>
+
+	<div class="step" data-x="-1000" data-y="-1000" data-z="1000" data-rotate="540">
+		<h1>Storage</h1>
+		<pre>
+			<code class="javascript">
+sessionStorage.localClicks = 
+  Number(sessionStorage.localClicks) + 1;
+document.getElementById("sessionLink")
+  .innerHTML = sessionStorage.localClicks + 
+               " clicks";
+			</code>
+		</pre>
+		<div style="margin:30px auto;">
+			<a id="localLink" href="javascript:localLink();"></a>&nbsp;&nbsp;<a id="sessionLink" href="javascript:sessionLink();"></a>
+		</div>
+	</div>
+
+	<div class="step questions" data-x="-2000" data-y="-1000" data-z="1000" data-rotate="540">
+		<h1>?</h1>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="-2000" data-z="1000" data-rotate="630">
+		<h1>File System</h1>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="-3000" data-z="1000" data-rotate="630">
+		<h1>Creates as many mini file systems as needed</h1>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="-4000" data-z="1000" data-rotate="630">
+		<h1>Create Directories</h1>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="-5000" data-z="1000" data-rotate="630">
+		<h1>Create/Modify/Delete Files</h1>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="-6000" data-z="1000" data-rotate="630">
+		<h1>Copy/Rename Files</h1>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="-7000" data-z="1000" data-rotate="630">
+		<h1>Problem</h1>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="-8000" data-z="1000" data-rotate="630">
+		<h1>Chrome Only</h1>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="-9000" data-z="1000" data-rotate="630">
+		<h1>Cool Example</h1>
+		<a href="http://www.html5rocks.com/en/tutorials/dnd/basics/" target="blank">File System Example</a>
+	</div>
+	
+	<div class="step" data-x="-1000" data-y="-9000" data-z="2000" data-rotate="720">
+		<h1>Index DB</h1>
+	</div>
+
+	<div class="step" data-x="0" data-y="-9000" data-z="2000" data-rotate="720">
+		<h1>Started with SQLite</h1>
+	</div>
+
+	<div class="step" data-x="1000" data-y="-9000" data-z="2000" data-rotate="720">
+		<h1>Couldn't agree on a consistent backend</h1>
+	</div>
+
+	<div class="step" data-x="2000" data-y="-9000" data-z="2000" data-rotate="720">
+		<h1>Dropped</h1>
+	</div>
+
+	<div class="step" data-x="3000" data-y="-9000" data-z="2000" data-rotate="720">
+		<h1>Object "Database"</h1>
+	</div>
+
+	<div class="step" data-x="4000" data-y="-9000" data-z="2000" data-rotate="720">
+		<h1>Create a database</h1>
+		<pre>
+			<code class="javascript">
+var db = window.indexDB.open("My Database");
+
+if(db.version != '1') {
+  db.createObjectStore('Items','id',true);
+  db.setVersion('1');
+}
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="5000" data-y="-9000" data-z="2000" data-rotate="720">
+		<h1>Storing Data</h1>
+		<pre>
+			<code class="javascript">
+var store = db.openStore('Items');
+
+var item = store.put({name: "Michael",
+                      sign: "Libra"});
+
+console.log(item.id);
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="6000" data-y="-9000" data-z="2000" data-rotate="720">
+		<h1>Retrieve Id</h1>
+		<pre>
+			<code class="javascript">
+db.createIndex("Names", "name", false);
+var index = db.openIndex("Names");
+var id = index.get("Michael");
+console.log(id);
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="7000" data-y="-9000" data-z="2000" data-rotate="720">
+		<h1>Query</h1>
+		<pre>
+			<code class="javascript">
+var range = new KeyRange.bound("A", "L");
+var cursor = index.openObjectCursor(range);
+
+while(cursor.continue()) {
+  console.log(cursor.value.sign);
+}
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="8000" data-y="-9000" data-z="2000" data-rotate="720">
+		<h1>Other Query Options</h1>
+		<pre>
+			<code class="javascript">
+// all are inclusive by default
+new KeyRange.upperBound(x);
+new KeyRange.lowerBound(y);
+new KeyRange.bound(x,y);
+new KeyRange.only(z);
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="9000" data-y="-9000" data-z="2000" data-rotate="720">
+		<h1>Example</h1>
+		<div>
+			<a href="javascript:createObjectStore();">Create Obj Store</a>&nbsp;&nbsp;<a href="javascript:removeObjectStore();">Remove Obj Store</a>
+			<div>
+				Key: <input id="indexKey"/>&nbsp;&nbsp;Value: <input id="indexValue"/>&nbsp;&nbsp;<a href="javascript:saveSampleIndexedDb();">Save</a>
+			</div>
+			<div id="elementsSaved">
+			</div>
+		</div>
+	</div>
+
+	<div class="step questions" data-x="10000" data-y="-9000" data-z="2000" data-rotate="720">
+		<h1>?</h1>
+	</div>
+
+	<div class="step" data-x="10000" data-y="-8000" data-z="2000" data-rotate="810">
+		<h1>Web Workers</h1>
+	</div>
+
+	<div class="step" data-x="10000" data-y="-7000" data-z="2000" data-rotate="810">
+		<h1>Does JavaScript support threads?</h1>
+	</div>
+
+	<div class="step questions" data-x="10000" data-y="-6000" data-z="2000" data-rotate="810">
+		<h1>No</h1>
+	</div>
+
+	<div class="step" data-x="10000" data-y="-5000" data-z="2000" data-rotate="810">
+		<h1>JavaScript is single threaded</h1>
+	</div>
+
+	<div class="step" data-x="10000" data-y="-4000" data-z="2000" data-rotate="810">
+		<h1>Web Workers bring threading to the client</h1>
+	</div>
+
+	<div class="step" data-x="10000" data-y="-3000" data-z="2000" data-rotate="810">
+		<h1>Web Worker</h1>
+		<pre>
+			<code class="javascript">
+var worker = new Worker('./js/work.js');
+
+worker.postMessage("Some message");
+			</code>
+		</pre>
+		<a href="javascript:testWorker();">Test Worker</a>&nbsp;&nbsp;<a href="javascript:stopWorker();">Stop Worker</a>
+	</div>
+
+	<div class="step" data-x="10000" data-y="-2000" data-z="2000" data-rotate="810">
+		<h1>Worker Limitations</h1>
+		<ul>
+			<li>DOM</li>
+			<li><code>window</code> object</li>
+			<li><code>document</code> object</li>
+			<li><code>parent</code> object</li>
+		</ul>
+	</div>
+
+	<div class="step" data-x="10000" data-y="-1000" data-z="2000" data-rotate="810">
+		<h1>Loading External Scripts</h1>
+		<pre>
+			<code class="javascript">
+importScripts("./js/script1.js");
+importScripts("./js/script2.js");
+
+// Equivalent to the two lines above
+importScripts("./js/script1.js", 
+              "./js/script2.js");
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="10000" data-y="0" data-z="2000" data-rotate="810">
+		<h1>Inline Worker</h1>
+		<pre>
+			<code class="javascript">
+window.URL = window.URL || window.webkitURL;
+
+var blob = 
+  new Blob(["onmessage = function(e) {" + 
+            " postMessage('Hey!'); }"]);
+var blobURL = 
+  window.URL.createObjectURL(blob);
+
+var worker = new Worker(blobURL);
+			</code>
+		</pre>
+		<a href="javascript:inlineWorker()">Say Hey!</a>
+	</div>
+
+	<div class="step" data-x="10000" data-y="1000" data-z="2000" data-rotate="810">
+		<h1>Error Handling</h1>
+		<pre>
+			<code class="javascript">
+var worker = new Worker(blobURL);
+worker.addEventListener('error', 
+  function(e){
+    console.log(e.message);
+  }, false);
+
+worker.postMessage();
+			</code>
+		</pre>
+		<a href="javascript:badWorker()">Cause an error</a>
+	</div>
+
+	<div class="step questions" data-x="10000" data-y="2000" data-z="2000" data-rotate="810">
+		<h1>?</h1>
+	</div>
+
+	<div class="step" data-x="9000" data-y="2000" data-z="2000" data-rotate="900">
+		<h1>Cross Document Messaging</h1>
+	</div>
+
+	<div class="step" data-x="8000" data-y="2000" data-z="2000" data-rotate="900">
+		<h1>Can't talk to other windows</h1>
+	</div>
+
+	<div class="step" data-x="7000" data-y="2000" data-z="2000" data-rotate="900">
+		<h1>Requires a server trip</h1>
+	</div>
+
+	<div class="step" data-x="6000" data-y="2000" data-z="2000" data-rotate="900">
+		<h1>Until HTML5</h1>
+	</div>
+
+	<div class="step" data-x="5000" data-y="2000" data-z="2000" data-rotate="900">
+		<h1>postMessage( )</h1>
+		<pre>
+			<code class="javascript">
+var win = window.open('./receiver.html', 
+                      'clientWindow');
+
+win.postMessage("Hello new window!", 
+                'http://localhost');
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="4000" data-y="2000" data-z="2000" data-rotate="900">
+		<h1>Receiving</h1>
+		<pre>
+			<code class="javascript">
+window.addEventListener('message', 
+  function(e) {
+    if(e.origin == 'http://localhost') {
+      container.innerHTML = e.data;
+    }
+  }
+}, false);
+			</code>
+		</pre>
+		<a href="javascript:launchWindow()">Open new window</a>&nbsp;&nbsp;<a href="javascript:sendMessage()">Message</a>
+	</div>
+
+	<div class="step questions" data-x="3000" data-y="2000" data-z="2000" data-rotate="900">
+		<h1>?</h1>
+	</div>
+
+	<div class="step" data-x="3000" data-y="1000" data-z="3000" data-rotate="990">
+		<h1>Web Sockets via</h1>
+		<img src="./images/socket-io-logo.png"/>
+	</div>
+
+	<div class="step" data-x="3000" data-y="0" data-z="3000" data-rotate="990">
+		<h1>What are web sockets?</h1>
+	</div>
+
+	<div class="step" data-x="3000" data-y="-1000" data-z="3000" data-rotate="990">
+		<h1>Persistent connection between the browser and server</h1>
+	</div>
+
+	<div class="step" data-x="3000" data-y="-2000" data-z="3000" data-rotate="990">
+		<h1>Requires both client and server support</h1>
+	</div>
+
+	<div class="step" data-x="3000" data-y="-3000" data-z="3000" data-rotate="990">
+		<h1>Both are spotty at best</h1>
+	</div>
+
+	<div class="step" data-x="3000" data-y="-4000" data-z="3000" data-rotate="990">
+		<h1>Enter Socket.IO</h1>
+	</div>
+
+	<div class="step" data-x="3000" data-y="-5000" data-z="3000" data-rotate="990">
+		<h1>Socket.IO makes Web Sockets practical</h1>
+	</div>
+
+	<div class="step" data-x="3000" data-y="-6000" data-z="3000" data-rotate="990">
+		<h1>Uses Web Sockets when available</h1>
+	</div>
+
+	<div class="step" data-x="3000" data-y="-7000" data-z="3000" data-rotate="990">
+		<h1>Falls back to other technologies when they are not</h1>
+	</div>
+
+	<div class="step" data-x="3000" data-y="-8000" data-z="3000" data-rotate="990">
+		<h1>Node.js</h1>
+	</div>
+
+	<div class="step" data-x="3000" data-y="-9000" data-z="3000" data-rotate="990">
+		<h1>Server Side</h1>
+		<pre>
+			<code class="javascript">
+io.sockets.on('connection', 
+  function (socket) {
+    socket.emit('news', { hello: 'world' });
+    socket.on('myevent', function (data) {
+      console.log(data);
+    });
+});
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="3000" data-y="-10000" data-z="3000" data-rotate="990">
+		<h1>Client Side</h1>
+		<pre>
+			<code class="javascript">
+var socket = 
+  io.connect('http://localhost');
+socket.on('news', function (data) {
+  console.log(data);
+  socket.emit('myevent', 
+              { my: 'data' });
+});
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="3000" data-y="-11000" data-z="3000" data-rotate="990">
+		<h1>Broadcasting</h1>
+		<pre>
+			<code class="javascript">
+io.sockets.on('connection', function (socket) {
+  socket.on('clickHappened', function (data) {
+    console.log(data);
+	socket.broadcast.emit('clickHappened', data);
+  });
+});
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="3000" data-y="-12000" data-z="3000" data-rotate="990">
+		<h1>Benefits</h1>
+		<ul>
+			<li>Instant Updates</li>
+		</ul>
+	</div>
+
+	<div class="step" data-x="3000" data-y="-13000" data-z="3000" data-rotate="990">
+		<h1>Disadvantages</h1>
+		<ul>
+			<li>Persistent Connections don't scale</li>
+			<li>Server side implementations are spotty</li>
+		</ul>
+	</div>
+
+	<div class="step questions" data-x="3000" data-y="-14000" data-z="3000" data-rotate="990">
+		<h1>?</h1>
+	</div>
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="30">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</h1>
+</div>
+<script>
+// root.addEventListener("impress:stepenter", function (event) {
+//                 window.location.hash = lastHash = "#/" + event.target.id;
+//             }, false);
+
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<script src="js/impress.js"></script>
+<script>
+  impress().init();
+
+	function alertLocation() {
+		navigator.geolocation.getCurrentPosition(
+		  function(position) {
+		    alert("You are located at:\n" + 
+		      "Lat: " + position.coords.latitude + 
+		      "\nLong: " + position.coords.longitude);
+		});
+	}
+	
+	function displayViaAttribute() {
+		var img = 
+		  document.getElementById("myImage");
+
+		alert(
+		  img.getAttribute("data-photographer"));
+	}
+	
+	function displayViaDataset() {
+		var img = 
+		  document.getElementById("myImage");
+
+		alert(img.dataset.photographer);
+	}
+	
+	function setDataAttributes() {
+		var img = 
+		  document.getElementById("myImage");
+
+		img.setAttribute("data-class", "HTML5");
+		img.dataset.instructor = "Michael Minella";
+
+		alert("Class:" + img.dataset.class + "\n" +
+		      "Instructor: " + img.dataset.instructor);
+	}
+	
+	function localLink() {
+		if(!localStorage.localClicks) {
+			localStorage.localClicks = 0;
+		}
+		
+		localStorage.localClicks = Number(localStorage.localClicks) + 1;
+		document.getElementById("localLink").innerHTML = localStorage.localClicks + " clicks";
+	}
+	
+	function sessionLink() {
+		if(!sessionStorage.localClicks) {
+			sessionStorage.localClicks = 0;
+		}
+		
+		sessionStorage.localClicks = Number(sessionStorage.localClicks) + 1;
+		document.getElementById("sessionLink").innerHTML = sessionStorage.localClicks + " clicks";
+	}
+	
+	var worker = null;
+	
+	function testWorker() {
+		if(worker == null) {
+			worker = new Worker("./js/work.js");
+			worker.addEventListener("message", function(e) {
+				console.log("Just heard back from the worker: " + e.data);
+			});
+		}
+		
+		worker.postMessage("Hello, worker");
+	}
+	
+	function stopWorker() {
+		if(worker != null) {
+			worker.postMessage("stop");
+		}
+	}
+	
+	function inlineWorker() {
+		window.URL = window.URL || window.webkitURL;
+		var blob = new Blob(["onmessage = function(e) { postMessage('Hey!'); }"]);
+
+		var blobURL = window.URL.createObjectURL(blob);
+
+		var worker = new Worker(blobURL);
+		worker.onmessage = function(e) {
+		  console.log(e.message);
+		};
+		worker.postMessage();
+	}
+	
+	function badWorker() {
+		window.URL = window.URL || window.webkitURL;
+
+		var blob = new Blob(["onmessage = function(e) { postMessage(1/x); }"]);
+		var blobURL = window.URL.createObjectURL(blob);
+
+		var worker = new Worker(blobURL);
+		worker.addEventListener('error', function(e){
+			console.log(e.message);
+		}, false);
+
+		worker.postMessage();
+	}
+	
+	var win = null;
+	function launchWindow() {
+		win = window.open('./receiver.html');
+	}
+	
+	function sendMessage(){
+		win.postMessage("Hello new window!", 'http://localhost');
+	}	
+</script>
+
+</body>
+</html>

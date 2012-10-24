@@ -102,13 +102,35 @@ HTML5/CSS3:
 	- Issues with CSS3
 	- Work arounds for old browsers
 - JavaScript APIs
-	- Storage
 	- Drag and Drop
-	- Cross document messaging
-	- Web Sockets
+		- http://www.html5rocks.com/en/tutorials/dnd/basics/
 	- Geolocation
-	
-	
+		- http://www.w3schools.com/html/html5_geolocation.asp
+		- http://mobile.tutsplus.com/tutorials/mobile-web-apps/html5-geolocation/
+	- Storage
+		- http://www.html5rocks.com/en/features/storage
+		- Data Attributes
+			- These decks
+		- Local Storage
+			- http://diveintohtml5.info/storage.html
+		- File system
+			- http://www.html5rocks.com/en/tutorials/file/filesystem-sync/
+		- Indexed DB
+	- Web Workers
+		- http://www.html5rocks.com/en/tutorials/workers/basics/
+		- http://www.w3schools.com/html/html5_webworkers.asp
+	- Messaging
+		- http://www.whatwg.org/specs/web-apps/current-work/multipage/web-messaging.html
+		- http://dev.opera.com/articles/view/window-postmessage-messagechannel/
+		- Cross Document Messaging
+			- http://ajaxian.com/archives/cross-window-messaging-with-html-5-postmessage
+		- Channel Messaging
+	- Web Sockets
+		- http://www.html5rocks.com/en/tutorials/websockets/basics/
+			- Java
+				- http://webtide.intalio.com/2011/08/websocket-example-server-client-and-loadtest/
+			- Node
+				- http://socket.io
 Notes:
 - http://sylvainw.github.com/HTML5-Future/index_en.html
 - http://www.medikoo.com/asynchronous-javascript/3d/#/asynchronous-javascript
