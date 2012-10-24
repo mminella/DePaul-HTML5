@@ -793,7 +793,7 @@ socket.on('news', function (data) {
 io.sockets.on('connection', function (socket) {
   socket.on('clickHappened', function (data) {
     console.log(data);
-	socket.broadcast.emit('clickHappened', data);
+	io.sockets.emit('clickHappened', data);
   });
 });
 			</code>
@@ -801,13 +801,28 @@ io.sockets.on('connection', function (socket) {
 	</div>
 
 	<div class="step" data-x="3000" data-y="-12000" data-z="3000" data-rotate="990">
+		<h1>Broadcasting cont</h1>
+		<pre>
+			<code class="javascript">
+io.sockets.on('connection', function (socket) {
+  socket.on('clickHappened', function (data) {
+    console.log(data);
+    // all sockets except 1
+	socket.broadcast.emit('clickHappened', data);
+  });
+});
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="3000" data-y="-13000" data-z="3000" data-rotate="990">
 		<h1>Benefits</h1>
 		<ul>
 			<li>Instant Updates</li>
 		</ul>
 	</div>
 
-	<div class="step" data-x="3000" data-y="-13000" data-z="3000" data-rotate="990">
+	<div class="step" data-x="3000" data-y="-14000" data-z="3000" data-rotate="990">
 		<h1>Disadvantages</h1>
 		<ul>
 			<li>Persistent Connections don't scale</li>
@@ -815,7 +830,7 @@ io.sockets.on('connection', function (socket) {
 		</ul>
 	</div>
 
-	<div class="step questions" data-x="3000" data-y="-14000" data-z="3000" data-rotate="990">
+	<div class="step questions" data-x="3000" data-y="-15000" data-z="3000" data-rotate="990">
 		<h1>?</h1>
 	</div>
 

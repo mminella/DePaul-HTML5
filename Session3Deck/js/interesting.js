@@ -20,6 +20,6 @@ function handler (req, res) {
 io.sockets.on('connection', function (socket) {
   socket.on('clickHappened', function (data) {
     console.log(data);
-	socket.broadcast.emit('clickHappened', data);
+	io.sockets.emit('clickHappened', data);
   });
 });
