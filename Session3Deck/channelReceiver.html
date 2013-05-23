@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+	</head>
+	<body>
+		<div id="messageDestination" style="border: 1px solid black;">&nbsp;</div>
+		<script>
+			window.addEventListener('message', function(e) {
+				console.log(e.data);
+				e.ports[0].postMessage("Right back at you!");
+			}, false);
+		</script>
+	</body>
+</html>

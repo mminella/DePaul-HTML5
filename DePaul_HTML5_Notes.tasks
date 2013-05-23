@@ -1,0 +1,137 @@
+HTML5/CSS3:
+- HTML
+	- History of HTML
+		- Hypertext Markup Language
+		- Used to connect/associate information
+		- First version of HTML to take a wholistic view of application development
+	- New features
+		- Semantic elements
+		- Audio/Video support
+		- Error Handling
+	- Dropped tags
+		- acronym
+		- applet
+		- dir
+		- isindex
+
+		- frame
+		- frameset
+		- noframes
+
+		- center
+		- font
+		- basefont
+		- big
+		- s
+		- strike
+		- u
+		- tt
+		- xmp
+	- New Tags
+		- Semantic tags
+			- header
+			- nav
+			- section
+			- article
+			- aside
+			- hgroup
+			- figure
+			- figcaption
+			- footer
+			- mark
+		- Content tags
+			- audio
+			- video
+			- embed
+			- canvas
+		- Forms
+			- New types
+				- email
+				- url
+				- tel
+				- number
+				- range
+				- time
+				- date
+				- datetime
+				- datetime-local
+				- week
+				- month
+				- color
+				- search
+			- Attributes
+			- Validation
+	- Error handling
+		- Tells browsers what to do when we break the rules
+	- Issues with new tags
+		- Many are not supported at all or across all browsers
+		- Not all tags can be self closed
+	- Work arounds for old browsers
+- CSS
+	- History of CSS
+	- What it's used for
+	- Elements
+		- low level
+			- browser prefixes
+			- box-sizing (box model choosing)
+			- nth-child, nth-of-type & nth-last-of-type
+		- layout
+			- multi-column layout (without tables)
+		- aesthetics
+			- Color formats
+			- opacity
+			- Styling new HTML5 elements
+				- video/audio - not needed
+				- input elements - dicey at best
+				- discuss semantic elements - like divs
+				- text-shadow
+				- background
+					- gradient
+					- multiple images
+				- borders
+					- rounded corners
+					- border images
+					- gradient borders
+				- shadows
+					- box and text
+					- regular
+		- transformations
+		- animations
+		- media queries
+		- responsive design
+	- Issues with CSS3
+	- Work arounds for old browsers
+- JavaScript APIs
+	- Drag and Drop
+		- http://www.html5rocks.com/en/tutorials/dnd/basics/
+	- Geolocation
+		- http://www.w3schools.com/html/html5_geolocation.asp
+		- http://mobile.tutsplus.com/tutorials/mobile-web-apps/html5-geolocation/
+	- Storage
+		- http://www.html5rocks.com/en/features/storage
+		- Data Attributes
+			- These decks
+		- Local Storage
+			- http://diveintohtml5.info/storage.html
+		- File system
+			- http://www.html5rocks.com/en/tutorials/file/filesystem-sync/
+		- Indexed DB
+	- Web Workers
+		- http://www.html5rocks.com/en/tutorials/workers/basics/
+		- http://www.w3schools.com/html/html5_webworkers.asp
+	- Messaging
+		- http://www.whatwg.org/specs/web-apps/current-work/multipage/web-messaging.html
+		- http://dev.opera.com/articles/view/window-postmessage-messagechannel/
+		- Cross Document Messaging
+			- http://ajaxian.com/archives/cross-window-messaging-with-html-5-postmessage
+		- Channel Messaging
+	- Web Sockets
+		- http://www.html5rocks.com/en/tutorials/websockets/basics/
+			- Java
+				- http://webtide.intalio.com/2011/08/websocket-example-server-client-and-loadtest/
+			- Node
+				- http://socket.io
+Notes:
+- http://sylvainw.github.com/HTML5-Future/index_en.html
+- http://www.medikoo.com/asynchronous-javascript/3d/#/asynchronous-javascript
+- http://scottcheng.com/the-revolutionary-css3-impressjs/
