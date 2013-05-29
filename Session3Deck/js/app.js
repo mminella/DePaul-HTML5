@@ -5,7 +5,7 @@ var app = require('http').createServer(handler)
 app.listen(9595);
 
 function handler (req, res) {
-  fs.readFile('/Library/WebServer/Documents/DePaul-HTML5/Session3Deck/socket.html',
+  fs.readFile('/Users/mminelal/Documents/SpringSourceWorkspace/DePaul-HTML5/Session3Deck/socket.html',
   function (err, data) {
     if (err) {
       res.writeHead(500);

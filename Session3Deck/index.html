@@ -312,10 +312,6 @@ nav.getCurrentPosition(displayPosition,
 	</div>
 
 	<div class="step" data-x="4000" data-y="-9000" data-rotate="360">
-		<h1>File System</h1>
-	</div>
-
-	<div class="step" data-x="5000" data-y="-9000" data-rotate="360">
 		<h1>Indexed DB</h1>
 	</div>
 
@@ -436,88 +432,99 @@ document.getElementById("sessionLink")
 		<h1>?</h1>
 	</div>
 
-	<div class="step" data-x="-2000" data-y="-2000" data-z="1000" data-rotate="630">
-		<h1>File System</h1>
-	</div>
-
-	<div class="step" data-x="-2000" data-y="-3000" data-z="1000" data-rotate="630">
-		<h1>Creates as many mini file systems as needed</h1>
-	</div>
-
-	<div class="step" data-x="-2000" data-y="-4000" data-z="1000" data-rotate="630">
-		<h1>Create Directories</h1>
-	</div>
-
-	<div class="step" data-x="-2000" data-y="-5000" data-z="1000" data-rotate="630">
-		<h1>Create/Modify/Delete Files</h1>
-	</div>
-
-	<div class="step" data-x="-2000" data-y="-6000" data-z="1000" data-rotate="630">
-		<h1>Copy/Rename Files</h1>
-	</div>
-
-	<div class="step" data-x="-2000" data-y="-7000" data-z="1000" data-rotate="630">
-		<h1>Problem</h1>
-	</div>
-
-	<div class="step" data-x="-2000" data-y="-8000" data-z="1000" data-rotate="630">
-		<h1>Chrome Only</h1>
-	</div>
-
-	<div class="step" data-x="-2000" data-y="-9000" data-z="1000" data-rotate="630">
-		<h1>Cool Example</h1>
-		<a href="http://www.html5rocks.com/en/tutorials/dnd/basics/" target="blank">File System Example</a>
-	</div>
-	
-	<div class="step" data-x="-1000" data-y="-9000" data-z="2000" data-rotate="720">
+	<div class="step" data-x="-2000" data-y="-2000" data-z="2000" data-rotate="630">
 		<h1>Index DB</h1>
 	</div>
 
-	<div class="step" data-x="0" data-y="-9000" data-z="2000" data-rotate="720">
+	<div class="step" data-x="-2000" data-y="-3000" data-z="2000" data-rotate="630">
 		<h1>Started with SQLite</h1>
 	</div>
 
-	<div class="step" data-x="1000" data-y="-9000" data-z="2000" data-rotate="720">
+	<div class="step" data-x="-2000" data-y="-4000" data-z="2000" data-rotate="630">
 		<h1>Couldn't agree on a consistent backend</h1>
 	</div>
 
-	<div class="step" data-x="2000" data-y="-9000" data-z="2000" data-rotate="720">
+	<div class="step" data-x="-2000" data-y="-5000" data-z="2000" data-rotate="630">
 		<h1>Dropped</h1>
 	</div>
 
-	<div class="step" data-x="3000" data-y="-9000" data-z="2000" data-rotate="720">
+	<div class="step" data-x="-2000" data-y="-6000" data-z="2000" data-rotate="630">
 		<h1>Object "Database"</h1>
 	</div>
 
-	<div class="step" data-x="4000" data-y="-9000" data-z="2000" data-rotate="720">
+	<div class="step" data-x="-2000" data-y="-7000" data-z="2000" data-rotate="630">
 		<h1>Create a database</h1>
 		<pre>
 			<code class="javascript">
-var db = window.indexDB.open("My Database");
-
-if(db.version != '1') {
-  db.createObjectStore('Items','id',true);
-  db.setVersion('1');
-}
+var dbOpenRequest = 
+  window.indexDB.open("My Database", 1);
 			</code>
 		</pre>
 	</div>
 
-	<div class="step" data-x="5000" data-y="-9000" data-z="2000" data-rotate="720">
+	<div class="step" data-x="-2000" data-y="-8000" data-z="2000" data-rotate="630">
+		<h1>Create Handlers</h1>
+		<pre>
+			<code class="javascript">
+// Success code (save reference to database)
+dbOpenRequest.onsuccess 
+// Error code
+dbOpenRequest.onerror
+// Schema update code
+dbOpenRequest.onupgradeneeded
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="-9000" data-z="2000" data-rotate="630">
+		<h1>Create Object Stores</h1>
+		<pre>
+			<code class="javascript">
+...
+localDb = event.currentTarget.result;
+localDb.createObjectStore('Items',
+                          {keyPath: 'id'});
+...
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="-10000" data-z="2000" data-rotate="630">
+		<h1>Open a Transaction</h1>
+		<pre>
+			<code class="javascript">
+// readonly, readwrite, versionchange
+var transaction = 
+    db.transaction(["Items"], "readwrite");
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="-11000" data-z="2000" data-rotate="630">
 		<h1>Storing Data</h1>
 		<pre>
 			<code class="javascript">
-var store = db.openStore('Items');
+var store = 
+    transaction.objectStore("Items");
 
-var item = store.put({name: "Michael",
-                      sign: "Libra"});
-
-console.log(item.id);
+var request = store.add({
+    "id": counter++,
+    "key" : key,
+    "value" : value
+});
 			</code>
 		</pre>
 	</div>
 
-	<div class="step" data-x="6000" data-y="-9000" data-z="2000" data-rotate="720">
+	<div class="step" data-x="-2000" data-y="-12000" data-z="2000" data-rotate="630">
+		<h1>Create Index</h1>
+		<pre>
+			<code class="javascript">
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="-2000" data-y="-13000" data-z="2000" data-rotate="630">
 		<h1>Retrieve Id</h1>
 		<pre>
 			<code class="javascript">
@@ -529,11 +536,11 @@ console.log(id);
 		</pre>
 	</div>
 
-	<div class="step" data-x="7000" data-y="-9000" data-z="2000" data-rotate="720">
+	<div class="step" data-x="-2000" data-y="-14000" data-z="2000" data-rotate="630">
 		<h1>Query</h1>
 		<pre>
 			<code class="javascript">
-var range = new KeyRange.bound("A", "L");
+var range = new IDBKeyRange.bound("A", "L");
 var cursor = index.openObjectCursor(range);
 
 while(cursor.continue()) {
@@ -543,56 +550,57 @@ while(cursor.continue()) {
 		</pre>
 	</div>
 
-	<div class="step" data-x="8000" data-y="-9000" data-z="2000" data-rotate="720">
+	<div class="step" data-x="-2000" data-y="-15000" data-z="2000" data-rotate="630">
 		<h1>Other Query Options</h1>
 		<pre>
 			<code class="javascript">
 // all are inclusive by default
-new KeyRange.upperBound(x);
-new KeyRange.lowerBound(y);
-new KeyRange.bound(x,y);
-new KeyRange.only(z);
+new IDBKeyRange.upperBound(x);
+new IDBKeyRange.lowerBound(y);
+new IDBKeyRange.bound(x,y);
+new IDBKeyRange.only(z);
 			</code>
 		</pre>
 	</div>
 
-	<div class="step" data-x="9000" data-y="-9000" data-z="2000" data-rotate="720">
+	<div class="step" data-x="-2000" data-y="-16000" data-z="2000" data-rotate="630">
 		<h1>Example</h1>
 		<div>
-			<a href="javascript:createObjectStore();">Create Obj Store</a>&nbsp;&nbsp;<a href="javascript:removeObjectStore();">Remove Obj Store</a>
+			<a href="javascript:createDatabase();">Create Obj Store</a>&nbsp;&nbsp;<a href="javascript:removeDatabase();">Remove Obj Store</a>
 			<div>
-				Key: <input id="indexKey"/>&nbsp;&nbsp;Value: <input id="indexValue"/>&nbsp;&nbsp;<a href="javascript:saveSampleIndexedDb();">Save</a>
+				Key: <input id="indexKey"/>&nbsp;&nbsp;Value: <input id="indexValue"/>&nbsp;&nbsp;<a href="javascript:saveSampleIndexedDb();">Save</a><br/>
+				<a href="javascript:listAllWithMichael();">Query</a>
 			</div>
 			<div id="elementsSaved">
 			</div>
 		</div>
 	</div>
 
-	<div class="step questions" data-x="10000" data-y="-9000" data-z="2000" data-rotate="720">
+	<div class="step questions" data-x="-2000" data-y="-17000" data-z="2000" data-rotate="630">
 		<h1>?</h1>
 	</div>
 
-	<div class="step" data-x="10000" data-y="-8000" data-z="2000" data-rotate="810">
+	<div class="step" data-x="-1000" data-y="-17000" data-z="2000" data-rotate="720">
 		<h1>Web Workers</h1>
 	</div>
 
-	<div class="step" data-x="10000" data-y="-7000" data-z="2000" data-rotate="810">
+	<div class="step" data-x="0" data-y="-17000" data-z="2000" data-rotate="720">
 		<h1>Does JavaScript support threads?</h1>
 	</div>
 
-	<div class="step questions" data-x="10000" data-y="-6000" data-z="2000" data-rotate="810">
+	<div class="step questions" data-x="1000" data-y="-17000" data-z="2000" data-rotate="720">
 		<h1>No</h1>
 	</div>
 
-	<div class="step" data-x="10000" data-y="-5000" data-z="2000" data-rotate="810">
+	<div class="step" data-x="2000" data-y="-17000" data-z="2000" data-rotate="720">
 		<h1>JavaScript is single threaded</h1>
 	</div>
 
-	<div class="step" data-x="10000" data-y="-4000" data-z="2000" data-rotate="810">
+	<div class="step" data-x="3000" data-y="-17000" data-z="2000" data-rotate="720">
 		<h1>Web Workers bring threading to the client</h1>
 	</div>
 
-	<div class="step" data-x="10000" data-y="-3000" data-z="2000" data-rotate="810">
+	<div class="step" data-x="4000" data-y="-17000" data-z="2000" data-rotate="720">
 		<h1>Web Worker</h1>
 		<pre>
 			<code class="javascript">
@@ -604,7 +612,7 @@ worker.postMessage("Some message");
 		<a href="javascript:testWorker();">Test Worker</a>&nbsp;&nbsp;<a href="javascript:stopWorker();">Stop Worker</a>
 	</div>
 
-	<div class="step" data-x="10000" data-y="-2000" data-z="2000" data-rotate="810">
+	<div class="step" data-x="5000" data-y="-17000" data-z="2000" data-rotate="720">
 		<h1>Worker Limitations</h1>
 		<ul>
 			<li>DOM</li>
@@ -614,7 +622,7 @@ worker.postMessage("Some message");
 		</ul>
 	</div>
 
-	<div class="step" data-x="10000" data-y="-1000" data-z="2000" data-rotate="810">
+	<div class="step" data-x="6000" data-y="-17000" data-z="2000" data-rotate="720">
 		<h1>Loading External Scripts</h1>
 		<pre>
 			<code class="javascript">
@@ -628,7 +636,7 @@ importScripts("./js/script1.js",
 		</pre>
 	</div>
 
-	<div class="step" data-x="10000" data-y="0" data-z="2000" data-rotate="810">
+	<div class="step" data-x="7000" data-y="-17000" data-z="2000" data-rotate="720">
 		<h1>Inline Worker</h1>
 		<pre>
 			<code class="javascript">
@@ -646,7 +654,7 @@ var worker = new Worker(blobURL);
 		<a href="javascript:inlineWorker()">Say Hey!</a>
 	</div>
 
-	<div class="step" data-x="10000" data-y="1000" data-z="2000" data-rotate="810">
+	<div class="step" data-x="8000" data-y="-17000" data-z="2000" data-rotate="720">
 		<h1>Error Handling</h1>
 		<pre>
 			<code class="javascript">
@@ -662,27 +670,27 @@ worker.postMessage();
 		<a href="javascript:badWorker()">Cause an error</a>
 	</div>
 
-	<div class="step questions" data-x="10000" data-y="2000" data-z="2000" data-rotate="810">
+	<div class="step questions" data-x="9000" data-y="-17000" data-z="2000" data-rotate="720">
 		<h1>?</h1>
 	</div>
 
-	<div class="step" data-x="9000" data-y="2000" data-z="2000" data-rotate="900">
+	<div class="step" data-x="9000" data-y="-16000" data-z="2000" data-rotate="810">
 		<h1>Cross Document Messaging</h1>
 	</div>
 
-	<div class="step" data-x="8000" data-y="2000" data-z="2000" data-rotate="900">
+	<div class="step" data-x="9000" data-y="-15000" data-z="2000" data-rotate="810">
 		<h1>Can't talk to other windows</h1>
 	</div>
 
-	<div class="step" data-x="7000" data-y="2000" data-z="2000" data-rotate="900">
+	<div class="step" data-x="9000" data-y="-14000" data-z="2000" data-rotate="810">
 		<h1>Requires a server trip</h1>
 	</div>
 
-	<div class="step" data-x="6000" data-y="2000" data-z="2000" data-rotate="900">
+	<div class="step" data-x="9000" data-y="-13000" data-z="2000" data-rotate="810">
 		<h1>Until HTML5</h1>
 	</div>
 
-	<div class="step" data-x="5000" data-y="2000" data-z="2000" data-rotate="900">
+	<div class="step" data-x="9000" data-y="-12000" data-z="2000" data-rotate="810">
 		<h1>postMessage( )</h1>
 		<pre>
 			<code class="javascript">
@@ -695,7 +703,7 @@ win.postMessage("Hello new window!",
 		</pre>
 	</div>
 
-	<div class="step" data-x="4000" data-y="2000" data-z="2000" data-rotate="900">
+	<div class="step" data-x="9000" data-y="-11000" data-z="2000" data-rotate="810">
 		<h1>Receiving</h1>
 		<pre>
 			<code class="javascript">
@@ -711,52 +719,52 @@ window.addEventListener('message',
 		<a href="javascript:launchWindow()">Open new window</a>&nbsp;&nbsp;<a href="javascript:sendMessage()">Message</a>
 	</div>
 
-	<div class="step questions" data-x="3000" data-y="2000" data-z="2000" data-rotate="900">
+	<div class="step questions" data-x="9000" data-y="-10000" data-z="2000" data-rotate="810">
 		<h1>?</h1>
 	</div>
 
-	<div class="step" data-x="3000" data-y="1000" data-z="3000" data-rotate="990">
+	<div class="step" data-x="8000" data-y="-10000" data-z="3000" data-rotate="900">
 		<h1>Web Sockets via</h1>
 		<img src="./images/socket-io-logo.png"/>
 	</div>
 
-	<div class="step" data-x="3000" data-y="0" data-z="3000" data-rotate="990">
+	<div class="step" data-x="7000" data-y="-10000" data-z="3000" data-rotate="900">
 		<h1>What are web sockets?</h1>
 	</div>
 
-	<div class="step" data-x="3000" data-y="-1000" data-z="3000" data-rotate="990">
+	<div class="step" data-x="6000" data-y="-10000" data-z="3000" data-rotate="900">
 		<h1>Persistent connection between the browser and server</h1>
 	</div>
 
-	<div class="step" data-x="3000" data-y="-2000" data-z="3000" data-rotate="990">
+	<div class="step" data-x="5000" data-y="-10000" data-z="3000" data-rotate="900">
 		<h1>Requires both client and server support</h1>
 	</div>
 
-	<div class="step" data-x="3000" data-y="-3000" data-z="3000" data-rotate="990">
+	<div class="step" data-x="4000" data-y="-10000" data-z="3000" data-rotate="900">
 		<h1>Both are spotty at best</h1>
 	</div>
 
-	<div class="step" data-x="3000" data-y="-4000" data-z="3000" data-rotate="990">
+	<div class="step" data-x="3000" data-y="-10000" data-z="3000" data-rotate="900">
 		<h1>Enter Socket.IO</h1>
 	</div>
 
-	<div class="step" data-x="3000" data-y="-5000" data-z="3000" data-rotate="990">
+	<div class="step" data-x="2000" data-y="-10000" data-z="3000" data-rotate="900">
 		<h1>Socket.IO makes Web Sockets practical</h1>
 	</div>
 
-	<div class="step" data-x="3000" data-y="-6000" data-z="3000" data-rotate="990">
+	<div class="step" data-x="1000" data-y="-10000" data-z="3000" data-rotate="900">
 		<h1>Uses Web Sockets when available</h1>
 	</div>
 
-	<div class="step" data-x="3000" data-y="-7000" data-z="3000" data-rotate="990">
+	<div class="step" data-x="0" data-y="-10000" data-z="3000" data-rotate="900">
 		<h1>Falls back to other technologies when they are not</h1>
 	</div>
 
-	<div class="step" data-x="3000" data-y="-8000" data-z="3000" data-rotate="990">
+	<div class="step" data-x="-1000" data-y="-10000" data-z="3000" data-rotate="900">
 		<h1>Node.js</h1>
 	</div>
 
-	<div class="step" data-x="3000" data-y="-9000" data-z="3000" data-rotate="990">
+	<div class="step" data-x="-2000" data-y="-10000" data-z="3000" data-rotate="900">
 		<h1>Server Side</h1>
 		<pre>
 			<code class="javascript">
@@ -771,66 +779,67 @@ io.sockets.on('connection',
 		</pre>
 	</div>
 
-	<div class="step" data-x="3000" data-y="-10000" data-z="3000" data-rotate="990">
+	<div class="step" data-x="-3000" data-y="-10000" data-z="3000" data-rotate="900">
 		<h1>Client Side</h1>
 		<pre>
 			<code class="javascript">
 var socket = 
   io.connect('http://localhost');
-socket.on('news', function (data) {
-  console.log(data);
-  socket.emit('myevent', 
-              { my: 'data' });
+  socket.on('news', function (data) {
+    console.log(data);
+    socket.emit('myevent', 
+                { my: 'data' });
 });
 			</code>
 		</pre>
 	</div>
 
-	<div class="step" data-x="3000" data-y="-11000" data-z="3000" data-rotate="990">
+	<div class="step" data-x="-4000" data-y="-10000" data-z="3000" data-rotate="900">
 		<h1>Broadcasting</h1>
 		<pre>
 			<code class="javascript">
-io.sockets.on('connection', function (socket) {
-  socket.on('clickHappened', function (data) {
+io.sockets.on('connection',function (socket) {
+  socket.on('clickHappened',function (data) {
     console.log(data);
-	io.sockets.emit('clickHappened', data);
+    io.sockets.emit('clickHappened', data);
   });
 });
 			</code>
 		</pre>
 	</div>
 
-	<div class="step" data-x="3000" data-y="-12000" data-z="3000" data-rotate="990">
+	<div class="step" data-x="-5000" data-y="-10000" data-z="3000" data-rotate="900">
 		<h1>Broadcasting cont</h1>
 		<pre>
 			<code class="javascript">
-io.sockets.on('connection', function (socket) {
-  socket.on('clickHappened', function (data) {
+io.sockets.on('connection',function(socket) {
+  socket.on('clickHappened',function(data) {
     console.log(data);
     // all sockets except 1
-	socket.broadcast.emit('clickHappened', data);
+    socket.broadcast.emit('clickHappened', 
+                          data);
   });
 });
 			</code>
 		</pre>
 	</div>
 
-	<div class="step" data-x="3000" data-y="-13000" data-z="3000" data-rotate="990">
+	<div class="step" data-x="-6000" data-y="-10000" data-z="3000" data-rotate="900">
 		<h1>Benefits</h1>
 		<ul>
 			<li>Instant Updates</li>
 		</ul>
 	</div>
 
-	<div class="step" data-x="3000" data-y="-14000" data-z="3000" data-rotate="990">
+	<div class="step" data-x="-7000" data-y="-10000" data-z="3000" data-rotate="900">
 		<h1>Disadvantages</h1>
 		<ul>
-			<li>Persistent Connections don't scale</li>
+			<li>Persistent connections don't scale?</li>
 			<li>Server side implementations are spotty</li>
 		</ul>
 	</div>
 
-	<div class="step questions" data-x="3000" data-y="-15000" data-z="3000" data-rotate="990">
+	<div class="step questions" data-x="-8000" data-y="-10000" data-z="3000" data-rotate="900">
 		<h1>?</h1>
 	</div>
 
@@ -961,8 +970,88 @@ if ("ontouchstart" in document.documentElement) {
 	}
 	
 	function sendMessage(){
-		win.postMessage("Hello new window!", 'http://localhost');
+		win.postMessage("Hello new window!", 'http://localhost:8080');
 	}	
+
+	var db;
+
+	function createDatabase() {
+		// you can also request to open a particular version...
+		var openRequest = window.indexedDB.open("My Database", 2);
+
+		openRequest.onsuccess = function (event) {
+			db = openRequest.result;
+		}
+		openRequest.onerror = function (event) {
+			console.log("error: " + event.target.errorCode);
+		}
+		openRequest.onupgradeneeded = function (event) {
+		  console.log("creating object store");
+		  localDb = event.currentTarget.result;
+		  itemStore = localDb.createObjectStore('Items',{keyPath: 'id'});
+		  itemStore.createIndex("key", "key", {unique:false});
+		  console.log("version = " + localDb.version);
+		}
+	}
+
+	function removeDatabase() {
+		var deleteRequest = window.indexedDB.deleteDatabase("My Database");
+		deleteRequest.onsuccess = function(event) {
+			console.log("successfully deleted");
+		}
+		deleteRequest.onerror = function(event) {
+			console.log("error: " + event.target.errorCode);
+		}
+	}
+
+	var counter = 0;
+
+	function saveSampleIndexedDb() {
+		var key = document.getElementById("indexKey").value;
+		var value = document.getElementById("indexValue").value;
+		console.log(key + ":" + value);
+		var transaction = db.transaction(["Items"], "readwrite");
+      	var store = transaction.objectStore("Items");
+
+     	var request = store.add({
+            "id": counter++,
+            "key" : key,
+            "value" : value
+         });
+         request.onsuccess = function(e) {
+         	console.log("items were added successfully");
+         };
+
+         request.onerror = function(e) {
+            console.log(e.value);
+         };
+	}
+
+	function listAllWithMichael() {
+	  var range = IDBKeyRange.only("Michael");
+
+      var store = db.transaction("Items").objectStore("Items");
+
+      var index = store.index("key");
+      document.getElementById("elementsSaved").innerHTML = "";
+
+      index.openCursor(range).onsuccess = function (event) {
+      	var cursor = event.target.result;
+      	if(cursor) {
+      		item = cursor.value;
+	         var jsonStr = JSON.stringify(item);
+	         document.getElementById("elementsSaved").innerHTML = 
+	         	document.getElementById("elementsSaved").innerHTML + jsonStr + "<br/>";
+	         cursor.continue();
+      	}
+      }
+
+      // index.get(range).onsuccess = function(evt) {
+      //    var item = evt.target.result;
+      //    var jsonStr = JSON.stringify(item);
+      //    document.getElementById("elementsSaved").innerHTML = jsonStr;
+      // }
+	}
 </script>
 
 </body>
