@@ -1258,6 +1258,8 @@ Star Wars Character: <input type="text" name="starWars" list="characters"></inpu
 	<option value="Han Solo"/>
 	<option value="Darth Vader"/>
 	<option value="Princess Leah"/>
+	<option value="AABCD"/>
+	<option value="ABCDE"/>
 	<option value="Yoda"/>
 	<option value="Obi Wan Kenobi"/>
 </datalist>
@@ -1446,9 +1448,17 @@ if ("ontouchstart" in document.documentElement) {
 	  fastForwardAudio.play();
 	}
 	
+	var audioMuted = false;
 	function mute() {
 	  var muteAudio = document.getElementById("muteAudio")
-	  muteAudio.volume=0;
+	  
+	  if(audioMuted) {
+		  muteAudio.volume=0;
+	  } else {
+		  muteAudio.volume=1;
+	  }
+	  
+	  audioMuted = !audioMuted;
 	}
 
 	function playVideo() {
@@ -1478,11 +1488,21 @@ if ("ontouchstart" in document.documentElement) {
 	function videoFastForward() {
 	  var video = document.getElementById("ffVideo");
 	  // fast forward 20 seconds
-	  video.currentTime = 20;
+	  video.currentTime = video.currentTime + 10;
 	  video.play();
 	}
+
+	var videoMuted = false;
 	function muteVideo() {
-	  document.getElementById("muteVideo").volume=0;
+	  var muteVideo = document.getElementById("muteVideo");
+	  
+	  if(videoMuted) {
+		  muteVideo.volume=0;
+	  } else {
+		  muteVideo.volume=1;
+	  }
+	  
+	  videoMuted = !videoMuted;
 	}
 	window.onload = function() {
 		var canvas = 
