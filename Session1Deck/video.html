@@ -2,13 +2,13 @@
 <body>
 		<video id="myVideo" controls="controls" 
 		       src="./video/drivein.webm"
-		       width="600" height="450" play="playEvent();" pause="pauseEvent();">
+		       width="600" height="450">
 		</video>
 		<script>
 			var video = document.getElementById('myVideo');
-			video.play = playEvent;
-			video.pause = pauseEvent;
-			video.volumenchange = volumeEvent;
+			video.onplay = playEvent;
+			video.onpause = pauseEvent;
+			video.onvolumenchange = volumeEvent;
 			
 			function playEvent() {
 				console.log("The video has begun!");
