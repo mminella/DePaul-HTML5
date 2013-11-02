@@ -5,6 +5,22 @@
 		       width="600" height="450">
 		</video>
 		<script>
+			var video = document.getElementById('myVideo');
+			video.play = playEvent;
+			video.pause = pauseEvent;
+			video.volumenchange = volumeEvent;
+			
+			function playEvent() {
+				console.log("The video has begun!");
+			}
+			
+			function pauseEvent() {
+				console.log("The video has been paused!");
+			}
+			
+			function volumeEvent() {
+				console.log("The volume was changed");
+			}
 		</script>
 </body>
 </html>
