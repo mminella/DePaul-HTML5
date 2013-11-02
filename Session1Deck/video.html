@@ -6,21 +6,32 @@
 		</video>
 		<script>
 			var video = document.getElementById('myVideo');
-			video.onplay = playEvent;
-			video.onpause = pauseEvent;
-			video.onvolumenchange = volumeEvent;
 			
-			function playEvent() {
+			video.addEventListener("loadstart", function() {
+				console.log("I'm looking for the video");
+			});
+			
+			video.addEventListener("canplay", function() {
+				console.log("I can start to play the video");
+			});
+			
+			video.addEventListener("canplaythrough", function() {
+				console.log("No need for waiting anymore!");
+			});
+			
+			video.addEventListener("play", function() {
 				console.log("The video has begun!");
-			}
+			});
 			
-			function pauseEvent() {
+			video.addEventListener("pause", function() {
 				console.log("The video has been paused!");
-			}
+			});
 			
-			function volumeEvent() {
+			video.addEventListener("volumechange", function() {
 				console.log("The volume was changed");
-			}
+			});
+			
+			
 		</script>
 </body>
 </html>
