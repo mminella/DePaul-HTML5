@@ -1488,7 +1488,10 @@ if ("ontouchstart" in document.documentElement) {
 	  video.setAttribute('height', '450');
 	  video.setAttribute('width', '600');
 	  slide.appendChild(video);
-	  video.play();
+      video.addEventListener('canplay', function() {
+        console.log('canplay was fired');
+          video.play();
+      });
 	}
 	
 	function pauseVideo() {
