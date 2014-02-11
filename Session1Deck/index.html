@@ -1552,13 +1552,13 @@ if ("ontouchstart" in document.documentElement) {
 		
 		var imageCanvas = 
 		    document.getElementById("imageCanvas");
-		imageCanvas = canvas.getContext("2d");
+		imageContext = imageCanvas.getContext("2d");
 		var imageObj = new Image();
 		imageObj.src = "./images/drivein1.jpg";
-		//imageCanvas.scale(.6, .6);
+		imageContext.scale(.6, .6);
         imageObj.onload = function() {
             console.log("onload was fired");
-            imageCanvas.drawImage(imageObj, 0, 0);
+            imageContext.drawImage(imageObj, 30, 10);
         }
 
 		var linearGradient = context.createLinearGradient(0, 0, 280, 0);
