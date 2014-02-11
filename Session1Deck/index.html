@@ -1550,13 +1550,16 @@ if ("ontouchstart" in document.documentElement) {
 		context.font = "bold 30px 'Arial'";
 		context.fillText("DePaul University", 25, 60);
 		
-		canvas = 
+		var imageCanvas = 
 		    document.getElementById("imageCanvas");
-		context = canvas.getContext("2d");
-		var image = new Image();
-		image.src = "./images/drivein1.jpg";
-		context.scale(.6, .6);
-		context.drawImage(image, 30, 10);
+		imageCanvas = canvas.getContext("2d");
+		var imageObj = new Image();
+		imageObj.src = "./images/drivein1.jpg";
+		//imageCanvas.scale(.6, .6);
+        imageObj.onload = function() {
+            console.log("onload was fired");
+            imageCanvas.drawImage(imageObj, 0, 0);
+        }
 
 		var linearGradient = context.createLinearGradient(0, 0, 280, 0);
 		linearGradient.addColorStop(0, "red");
