@@ -131,7 +131,7 @@ body {
 .top_area {
 	width: 100%;
 	height: 470px;
-	background: linear-gradient(top, #4298B3, #87D5ED);
+	background: linear-gradient(to bottom, #4298B3, #87D5ED);
 	border-bottom: 1px solid gray;
 	box-shadow: 0px 1px #DDD;
 	padding: 10px 0 0 0;
@@ -172,7 +172,7 @@ body {
 #marquee a {
 	color: white;
 	border: 1px solid #696963;
-	background-image: linear-gradient(bottom, #C54327, #ED7F58);
+	background-image: linear-gradient(to top, #C54327, #ED7F58);
 	text-decoration: none;
 	padding: 10px 35px;
 	border-radius: 5px;
@@ -181,7 +181,7 @@ body {
 .no-touch #marquee a:hover {
 	color: #000;
 	border: 1px solid #696963;
-	background-image: linear-gradient(bottom, #ED7F58, #C54327);
+	background-image: linear-gradient(to top, #ED7F58, #C54327);
 	text-decoration: none;
 	padding: 10px 35px;
 	border-radius: 5px;
@@ -294,7 +294,7 @@ footer p {
 	margin: 27px 0;
 	padding: 0;
 	list-style: none;  
-	background: linear-gradient(top, #F0FAFC, #CDE9EF);
+	background: linear-gradient(to top, #F0FAFC, #CDE9EF);
 	border-radius: 10px;
 	box-shadow: 0 2px 2px #2C95A8;
 	float: right;
@@ -320,13 +320,13 @@ footer p {
 }
 
 .no-touch #menu li:nth-child(n+2):hover{
-	background-image: linear-gradient(top, #FFF, #DCF3F7);
+	background-image: linear-gradient(to bottom, #FFF, #DCF3F7);
 	border-radius: 0 0 0 0;
 }
 
 .no-touch #menu li:hover{
 	border-radius: 10px 0 0 10px;
-	background-image: linear-gradient(top, #FFF, #DCF3F7);
+	background-image: linear-gradient(to bottom, #FFF, #DCF3F7);
 }
 
 .no-touch #menu li:hover > ul{
@@ -384,7 +384,7 @@ footer p {
 
 .no-touch #menu ul a:hover{
     background: #0186ba;
-	background: linear-gradient(bottom, #C9C7C7,  #E3DEDE);
+	background: linear-gradient(to top, #C9C7C7,  #E3DEDE);
 }
 
 #menu ul li:first-child a{
