@@ -494,6 +494,50 @@ a:focus {
   color: black;
   box-shadow: 10px 10px 10px #000;
 }
+#examples {
+  background: white;
+  border: 1px solid black;
+  padding: 20px;
+}
+#examples > div {
+  margin: 20px;
+}
+.simple_offset {
+  border: 1px solid black;
+  background: white;
+  color: black;
+  box-shadow: -5px -5px #888;
+}
+.simple_offset_with_blur {
+  border: 1px solid black;
+  background: white;
+  color: black;
+  box-shadow: -5px -5px 5px #888;
+}
+.simple_offset_with_spread {
+  border: 1px solid black;
+  background: white;
+  color: black;
+  box-shadow: -5px -5px 0 5px #888;
+}
+.simple_offset_with_blur_and_spread {
+  border: 1px solid black;
+  background: white;
+  color: black;
+  box-shadow: -5px -5px 5px 5px #888;
+}
+.simple_offset_with_no_offset_with_blur {
+  border: 1px solid black;
+  background: white;
+  color: black;
+  box-shadow: 0 0 5px #888;
+}
+.simple_offset_with_no_offset_blur_and_spread {
+  border: 1px solid black;
+  background: white;
+  color: black;
+  box-shadow: 0 0 5px 5px #888;
+}
 .inset_shadow {
   background: white;
   color: black;
