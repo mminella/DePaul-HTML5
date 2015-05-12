@@ -419,8 +419,134 @@ tr:first-of-type() / tr:last-of-type()
 		</pre>
     </div>
 
-    <div class="step questions" data-x="-5000" data-y="-7000">
-        <h1>?</h1>
+    <div class="step" data-x="-5000" data-y="-7000">
+        <h1>calc()</h1>
+		<pre>
+			<code class="css">
+.dynamicWidth {
+    width: calc(100% / 2);
+    border: 1px solid red;
+}
+            </code>
+		</pre>
+        <div class="dynamicWidth">
+            <div>Dynamic width</div>
+        </div>
+    </div>
+
+    <div class="step" data-x="-4000" data-y="-7000" data-z="-500">
+        <h1>Counters</h1>
+    </div>
+
+    <div class="step" data-x="-3000" data-y="-7000" data-z="-500">
+        <h1>Counters</h1>
+        <div>
+            Provide basic counter functionality
+        </div>
+    </div>
+
+    <div class="step" data-x="-2000" data-y="-7000" data-z="-500">
+        <h1>Counters</h1>
+        <ul>
+            <li>Declare counters</li>
+            <li>Reset counter</li>
+            <li>Increment counter</li>
+            <li>Get counter value</li>
+        </ul>
+    </div>
+
+    <div class="step" data-x="-1000" data-y="-7000" data-z="-500">
+        <h1>Reset</h1>
+		<pre>
+			<code class="css">
+body {
+    counter-reset: myCounter;
+}
+            </code>
+		</pre>
+    </div>
+
+    <div class="step" data-x="0" data-y="-7000" data-z="-500">
+        <h1>Increment</h1>
+		<pre>
+			<code class="css">
+li {
+    counter-increment: myCounter;
+}
+            </code>
+		</pre>
+    </div>
+
+    <div class="step" data-x="1000" data-y="-7000" data-z="-500">
+        <h1>Fetch/Display</h1>
+		<pre>
+			<code class="css">
+li::before {
+  content: "Item " counter(myCounter) ": ";
+}
+            </code>
+		</pre>
+        <ul class="basicCounter">
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+        </ul>
+    </div>
+
+    <div class="step" data-x="2000" data-y="-7000" data-z="-500">
+        <h1>Nested Counters</h1>
+        <div>
+            If you reset a counter in the scope of an existing count, it will create a new instance
+        </div>
+    </div>
+
+    <div class="step" data-x="3000" data-y="-7000" data-z="-500">
+        <h1>Concatenate</h1>
+<pre>
+    <code class="css">
+li::before {
+  content:
+    "Item " counters(myCounter, ".") ": ";
+}
+    </code>
+</pre>
+    </div>
+
+    <div class="step" data-x="4000" data-y="-7000" data-z="-500">
+        <h1>Concatenate</h1>
+        <ul class="basicCounter">
+            <li>First</li>
+            <li><ul class="secondCounter">
+                <li>Sub 1</li>
+                <li>Sub 2</li>
+            </ul></li>
+            <li>Third</li>
+        </ul>
+    </div>
+
+    <div class="step" data-x="5000" data-y="-7000" data-z="-500">
+        <h1>Formats</h1>
+        <div>Any <code>list-style-type</code> can be used:</div>
+<pre>
+    <code class="css">
+li::before {
+  content:
+    "Item " counter(myCounter, upper-roman)
+        ": ";
+}
+    </code>
+</pre>
+    </div>
+
+    <div class="step" data-x="6000" data-y="-7000" data-z="-500">
+        <h1>Formats</h1>
+        <ul class="formattedCounter">
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+            <li>Four</li>
+            <li>Five</li>
+        </ul>
     </div>
 
     <div class="step" data-x="-5000" data-y="-6000" data-rotate="90" data-z="1000">
@@ -846,12 +972,88 @@ text-shadow: 10px 10px 10px black;
         <h1>That's the 2D transformations.</h1>
     </div>
 
-    <div class="step" data-x="11000" data-y="5000" data-rotate="90" data-z="1500">
-        <h1>There are 3D transformations defined...</h1>
+    <div class="step" data-x="11000" data-y="5000" data-rotate="90" data-z="1000">
+        <h1>3D Transformations!</h1>
     </div>
 
-    <div class="step" data-x="11000" data-y="6000" data-rotate="90" data-z="1500">
-        <h1>...but no browsers support them.</h1>
+    <div class="step" data-x="11000" data-y="6000" data-rotate="90" data-z="1000">
+        <h1>Perspective</h1>
+        <pre>
+            <code class="css">
+.perspective {
+  // value is the distance the
+  //user is from the object
+  transform: perspective(500px) rotateY(45deg);
+}
+            </code>
+        </pre>
+        <div class="perspective">
+            <div>Perspective</div>
+        </div>
+    </div>
+
+    <div class="step" data-x="11000" data-y="7000" data-rotate="90" data-z="1000">
+        <h1>rotateX()</h1>
+        <pre>
+            <code class="css">
+.rotateX {
+  // value is the distance the
+  //user is from the object
+  transform: perspective(500px) rotateX(45deg);
+}
+            </code>
+        </pre>
+        <div class="rotateX">
+            <div>Rotated</div>
+        </div>
+    </div>
+
+    <div class="step" data-x="11000" data-y="8000" data-rotate="90" data-z="1000">
+        <h1>rotateY()</h1>
+        <pre>
+            <code class="css">
+.rotateX {
+  // value is the distance the
+  //user is from the object
+  transform: perspective(500px) rotatY(45deg);
+}
+            </code>
+        </pre>
+        <div class="perspective">
+            <div>Rotated</div>
+        </div>
+    </div>
+
+    <div class="step" data-x="11000" data-y="9000" data-rotate="90" data-z="1000">
+        <h1>rotateZ()</h1>
+        <pre>
+            <code class="css">
+.rotateX {
+  // value is the distance the
+  //user is from the object
+  transform: perspective(500px) rotateZ(45deg);
+}
+            </code>
+        </pre>
+        <div class="rotateZ">
+            <div>Rotated</div>
+        </div>
+    </div>
+
+    <div class="step" data-x="11000" data-y="10000" data-rotate="90" data-z="1000">
+        <h1>translateZ()</h1>
+        <pre>
+            <code class="css">
+.translateX {
+  // value is the distance the
+  //user is from the object
+  transform: perspective(500px) rotateZ(75px);
+}
+            </code>
+        </pre>
+        <div class="translateZ">
+            <div>Translated</div>
+        </div>
     </div>
 
     <div class="step questions" data-x="11000" data-y="7000" data-rotate="90" data-z="1500">

@@ -427,6 +427,91 @@ a:focus {
 	column-gap: 30px;
 	column-rule: 1px solid black;
 }
+.perspective {
+    border: 1px solid black;
+    background: white;
+    color: black;
+}
+.perspective > div {
+    background: red;
+    color: white;
+    transform: perspective(500px) rotateY(45deg);
+    width: 300px;
+    margin: auto;
+}
+.rotateX {
+    border: 1px solid black;
+    background: white;
+    color: black;
+}
+.rotateX > div {
+    background: red;
+    color: white;
+    transform: perspective(500px) rotateX(45deg);
+    width: 300px;
+    margin: auto;
+}
+.rotateZ {
+    border: 1px solid black;
+    background: white;
+    color: black;
+}
+.rotateZ > div {
+    background: red;
+    color: white;
+    transform: perspective(500px) rotateZ(45deg);
+    width: 300px;
+    margin: auto;
+}
+.translateZ {
+    border: 1px solid black;
+    background: white;
+    color: black;
+}
+.translateZ > div {
+    background: red;
+    color: white;
+    transform: perspective(500px) translateZ(75px);
+    width: 300px;
+    margin: auto;
+}
+.dynamicWidth {
+    border: 1px solid black;
+    background: white;
+    color: black;
+    width: 800px;
+}
+.dynamicWidth > div {
+    width: calc(100% / 2);
+    border: 1px solid red;
+}
+.basicCounter {
+    counter-reset: myCounter;
+}
+.basicCounter > li {
+    counter-increment: myCounter;
+}
+.basicCounter > li::before {
+    content: "List item " counter(myCounter) ": ";
+}
+.secondCounter {
+    counter-reset: myCounter;
+}
+.secondCounter > li {
+    counter-increment: myCounter;
+}
+.secondCounter > li::before {
+    content: "List item " counters(myCounter, ".") ": ";
+}
+.formattedCounter {
+    counter-reset: formattedCounter;
+}
+.formattedCounter > li {
+    counter-increment: formattedCounter;
+}
+.formattedCounter > li::before {
+    content: "List item " counter(formattedCounter, upper-roman) ": ";
+}
 #opacity {
 	color: black;
 	background: gray;
