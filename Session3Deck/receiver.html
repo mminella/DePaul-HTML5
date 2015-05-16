@@ -10,7 +10,7 @@
 		<script>
 			window.addEventListener('message', function(e) {
 				if(e.origin == 'http://mminella.github.io/') {
-					document.getElementById("messageDestination").innerHTML = messageDestination.innerHTML + '<br/>' + e.data;
+					document.getElementById("messageDestination").innerHTML = document.getElementById("messageDestination").innerHTML + '<br/>' + e.data;
 				} else {
 					//ignore untrusted message
 				}
