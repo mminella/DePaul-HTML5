@@ -311,10 +311,6 @@ nav.getCurrentPosition(displayPosition,
 		<h1>Local Storage</h1>
 	</div>
 
-	<div class="step" data-x="4000" data-y="-9000" data-rotate="360">
-		<h1>File System</h1>
-	</div>
-
 	<div class="step" data-x="5000" data-y="-9000" data-rotate="360">
 		<h1>Indexed DB</h1>
 	</div>
@@ -436,39 +432,6 @@ document.getElementById("sessionLink")
 		<h1>?</h1>
 	</div>
 
-	<div class="step" data-x="-2000" data-y="-2000" data-z="1000" data-rotate="630">
-		<h1>File System</h1>
-	</div>
-
-	<div class="step" data-x="-2000" data-y="-3000" data-z="1000" data-rotate="630">
-		<h1>Creates as many mini file systems as needed</h1>
-	</div>
-
-	<div class="step" data-x="-2000" data-y="-4000" data-z="1000" data-rotate="630">
-		<h1>Create Directories</h1>
-	</div>
-
-	<div class="step" data-x="-2000" data-y="-5000" data-z="1000" data-rotate="630">
-		<h1>Create/Modify/Delete Files</h1>
-	</div>
-
-	<div class="step" data-x="-2000" data-y="-6000" data-z="1000" data-rotate="630">
-		<h1>Copy/Rename Files</h1>
-	</div>
-
-	<div class="step" data-x="-2000" data-y="-7000" data-z="1000" data-rotate="630">
-		<h1>Problem</h1>
-	</div>
-
-	<div class="step" data-x="-2000" data-y="-8000" data-z="1000" data-rotate="630">
-		<h1>Chrome Only</h1>
-	</div>
-
-	<div class="step" data-x="-2000" data-y="-9000" data-z="1000" data-rotate="630">
-		<h1>Cool Example</h1>
-		<a href="http://www.html5rocks.com/en/tutorials/dnd/basics/" target="blank">File System Example</a>
-	</div>
-	
 	<div class="step" data-x="-1000" data-y="-9000" data-z="2000" data-rotate="720">
 		<h1>Index DB</h1>
 	</div>
@@ -632,15 +595,28 @@ importScripts("./js/script1.js",
 		<h1>Inline Worker</h1>
 		<pre>
 			<code class="javascript">
+&lt;script id="w1" type="javascript/worker"&gt;
+  self.addEventListener('message',
+    function(e) {
+      postMessage("Hey!");
+    }, false);
+&lt;/script&gt;
+			</code>
+		</pre>
+	</div>
+
+	<div class="step" data-x="10000" data-y="0" data-z="000" data-rotate="810">
+		<h1>Inline Worker</h1>
+		<pre>
+			<code class="javascript">
 window.URL = window.URL || window.webkitURL;
-
-var blob = 
-  new Blob(["onmessage = function(e) {" + 
-            " postMessage('Hey!'); }"]);
-var blobURL = 
+var blob = new Blob([
+  document.querySelector('#worker1')
+          .textContent
+], { type: "text/javascript" });
+var blobURL =
   window.URL.createObjectURL(blob);
-
-var worker = new Worker(blobURL);
+inlineWorkerRef = new Worker(blobURL);
 			</code>
 		</pre>
 		<a href="javascript:inlineWorker()">Say Hey!</a>
@@ -853,6 +829,13 @@ if ("ontouchstart" in document.documentElement) {
 </script>
 
 <script src="js/impress.js"></script>
+<script id="worker1" type="javascript/worker">
+    // This script won't be parsed by JS engines because its type is javascript/worker.
+	self.addEventListener('message', function(e) {
+		postMessage("Hey!");
+	}, false);
+// Rest of your worker code goes here.
+</script>
 <script>
   impress().init();
 
@@ -927,18 +910,27 @@ if ("ontouchstart" in document.documentElement) {
 			worker.postMessage("stop");
 		}
 	}
-	
+
+  	var inlineWorkerRef;
 	function inlineWorker() {
-		window.URL = window.URL || window.webkitURL;
-		var blob = new Blob(["onmessage = function(e) { postMessage('Hey!'); }"]);
 
-		var blobURL = window.URL.createObjectURL(blob);
+		if(inlineWorkerRef == null) {
+			window.URL = window.URL || window.webkitURL;
 
-		var worker = new Worker(blobURL);
-		worker.onmessage = function(e) {
-		  console.log(e.message);
-		};
-		worker.postMessage();
+			var blob = new Blob([
+				document.querySelector('#worker1').textContent
+			], { type: "text/javascript" });
+
+			var blobURL = window.URL.createObjectURL(blob);
+
+			inlineWorkerRef = new Worker(blobURL);
+
+			inlineWorkerRef.onmessage = function(e) {
+				console.log(e.data);
+			};
+		}
+
+		inlineWorkerRef.postMessage();
 	}
 	
 	function badWorker() {
@@ -949,7 +941,7 @@ if ("ontouchstart" in document.documentElement) {
 
 		var worker = new Worker(blobURL);
 		worker.addEventListener('error', function(e){
-			console.log(e.message);
+			console.log("The error was" + e.message);
 		}, false);
 
 		worker.postMessage();
