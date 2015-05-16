@@ -953,6 +953,7 @@ if ("ontouchstart" in document.documentElement) {
 	}
 	
 	function sendMessage(){
+		console.log("sending the message");
 		win.postMessage("Hello new window!", 'http://mminella.github.io');
 	}	
 </script>
