@@ -9,6 +9,8 @@
 		<div id="messageDestination" style="border: 1px solid black;">&nbsp;</div>
 		<script>
 			window.addEventListener('message', function(e) {
+				console.log("e.data = " + e.data);
+				console.log("e.origin = " + e.origin);
 				if(e.origin == 'http://mminella.github.io') {
 					document.getElementById("messageDestination").innerHTML = document.getElementById("messageDestination").innerHTML + '<br/>' + e.data;
 				} else {
