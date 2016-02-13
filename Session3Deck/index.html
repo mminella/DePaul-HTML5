@@ -930,7 +930,7 @@ if ("ontouchstart" in document.documentElement) {
 			};
 		}
 
-		inlineWorkerRef.postMessage();
+		inlineWorkerRef.postMessage("foo");
 	}
 	
 	function badWorker() {
@@ -944,7 +944,7 @@ if ("ontouchstart" in document.documentElement) {
 			console.log("The error was" + e.message);
 		}, false);
 
-		worker.postMessage();
+		worker.postMessage("bad");
 	}
 	
 	var win = null;
