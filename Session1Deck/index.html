@@ -1433,15 +1433,34 @@ Star Wars Character: <input type="text" name="starWars" list="characters"></inpu
 		</pre>
     </div>
 
-	<div class="step questions" data-x="10000" data-y="-11675" data-z="-3000"  data-rotate="-810">
+    <div id="spellcheckSlide" class="step" data-x="10000" data-y="-11675" data-z="-3000" data-rotate="-810">
+        <h1>spellcheck</h1>
+        <pre>
+            <code class="html">
+&lt;form action="#"&gt;
+  First Name: &lt;input type="text" 
+    name="name" spellcheck="true" 
+    placeholder="First Name"/&gt;
+  &lt;input type="submit" /&gt;
+&lt;/form&gt;
+            </code>
+        </pre>
+        <form action="javascript:void();">
+          First Name: <input type="text" name="name" placeholder="First Name" title="First letter caps" spellcheck="true" />
+          <input type="submit" />
+        </form>
+    </div>
+
+
+	<div class="step questions" data-x="10000" data-y="-12675" data-z="-3000"  data-rotate="-810">
 		<h1>?</h1>
 	</div>
 
-	<div class="step" data-x="10000" data-y="-11675" data-rotate="-900">
+	<div class="step" data-x="10000" data-y="-12675" data-rotate="-900">
 		<h1>What's next?</h1>
 	</div>
 
-	<div class="step" data-x="9000" data-y="-11675" data-rotate="-900">
+	<div class="step" data-x="9000" data-y="-12675" data-rotate="-900">
         <img src="./images/CSS3_Logo_512.png" alt="CSS3 Logo"/>
 	</div>
 
@@ -1451,7 +1470,7 @@ Star Wars Character: <input type="text" name="starWars" list="characters"></inpu
 </div>
 
 <div class="hint">
-    <p>Use a spacebar or arrow keys to navigate</h1>
+    <p>Use arrow keys to navigate</h1>
 </div>
 <script>
 // root.addEventListener("impress:stepenter", function (event) {
@@ -1468,6 +1487,10 @@ if ("ontouchstart" in document.documentElement) {
 <script>
 	impress().init();
   	hljs.initHighlightingOnLoad();
+
+    document.getElementById('contact').addEventListener('keyup', function(event) {
+        event.preventDefault();
+    });
 
 	function playAudio() {
 	  var audioElement = 
