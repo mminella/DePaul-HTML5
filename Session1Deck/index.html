@@ -1515,7 +1515,7 @@ if ("ontouchstart" in document.documentElement) {
 	function fastForward() {
 	  // fast forward 20 seconds
 	  var fastForwardAudio = document.getElementById("fastForwardAudio")
-	  fastForwardAudio.currentTime = 16.6;
+	  fastForwardAudio.currentTime = fastForwardAudio.currentTime + 5;
 	  fastForwardAudio.play();
 	}
 	

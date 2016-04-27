@@ -522,7 +522,11 @@ new KeyRange.only(z);
 	<div class="step" data-x="9000" data-y="-9000" data-z="2000" data-rotate="720">
 		<h1>Example</h1>
 		<div>
+<<<<<<< Updated upstream
 			<a href="javascript:createObjectStore();">Create Obj Store</a>&nbsp;&nbsp;<a href="javascript:removeObjectStore();">Remove Obj Store</a>
+=======
+			<a href="javascript:createDatabase();">Create Obj Store</a>&nbsp;&nbsp;<!--a href="javascript:removeDatabase();">Remove Obj Store</a-->
+>>>>>>> Stashed changes
 			<div>
 				Key: <input id="indexKey"/>&nbsp;&nbsp;Value: <input id="indexValue"/>&nbsp;&nbsp;<a href="javascript:saveSampleIndexedDb();">Save</a>
 			</div>
@@ -913,10 +917,16 @@ if ("ontouchstart" in document.documentElement) {
 
   	var inlineWorkerRef;
 	function inlineWorker() {
+<<<<<<< Updated upstream
+=======
+		window.URL = window.URL || window.webkitURL;
+		var blob = new Blob(["self.addEventListener('message', function(e) { console.log(e.data);postMessage('Hey!'); });"]);
+>>>>>>> Stashed changes
 
 		if(inlineWorkerRef == null) {
 			window.URL = window.URL || window.webkitURL;
 
+<<<<<<< Updated upstream
 			var blob = new Blob([
 				document.querySelector('#worker1').textContent
 			], { type: "text/javascript" });
@@ -931,6 +941,13 @@ if ("ontouchstart" in document.documentElement) {
 		}
 
 		inlineWorkerRef.postMessage("foo");
+=======
+		var worker = new Worker(blobURL);
+		worker.onmessage = function(e) {
+		  console.log(e.data);
+		};
+		worker.postMessage("Hello");
+>>>>>>> Stashed changes
 	}
 	
 	function badWorker() {
@@ -941,10 +958,17 @@ if ("ontouchstart" in document.documentElement) {
 
 		var worker = new Worker(blobURL);
 		worker.addEventListener('error', function(e){
+<<<<<<< Updated upstream
 			console.log("The error was" + e.message);
 		}, false);
 
 		worker.postMessage("bad");
+=======
+			console.log(e);
+		}, false);
+
+		worker.postMessage("error");
+>>>>>>> Stashed changes
 	}
 	
 	var win = null;
@@ -956,6 +980,92 @@ if ("ontouchstart" in document.documentElement) {
 		console.log("sending the message");
 		win.postMessage("Hello new window!", 'http://mminella.github.io');
 	}	
+<<<<<<< Updated upstream
+=======
+
+	var db;
+
+	function createDatabase() {
+		// you can also request to open a particular version...
+		var openRequest = window.indexedDB.open("My Database", 2);
+
+		openRequest.onsuccess = function (event) {
+			db = openRequest.result;
+		}
+		openRequest.onerror = function (event) {
+			console.log("error: " + event.target.errorCode);
+		}
+		openRequest.onupgradeneeded = function (event) {
+		  console.log("creating object store");
+		  localDb = event.currentTarget.result;
+		  itemStore = localDb.createObjectStore('Items',{keyPath: 'id'});
+		  itemStore.createIndex("key", "key", {unique:false});
+		  console.log("version = " + localDb.version);
+		}
+	}
+
+	function removeDatabase() {
+		var deleteRequest = window.indexedDB.deleteDatabase("My Database");
+		deleteRequest.onsuccess = function(event) {
+			console.log("successfully deleted");
+		};
+		deleteRequest.onerror = function(event) {
+			console.log("error: " + event.target.errorCode);
+		};
+		deleteRequest.onblocked = function () {
+			console.log("Couldn't delete database due to the operation being blocked");
+		};
+	}
+
+	var counter = 0;
+
+	function saveSampleIndexedDb() {
+		var key = document.getElementById("indexKey").value;
+		var value = document.getElementById("indexValue").value;
+		console.log(key + ":" + value);
+		var transaction = db.transaction(["Items"], "readwrite");
+      	var store = transaction.objectStore("Items");
+
+     	var request = store.add({
+            "id": counter++,
+            "key" : key,
+            "value" : value
+         });
+         request.onsuccess = function(e) {
+         	console.log("items were added successfully");
+         };
+
+         request.onerror = function(e) {
+            console.log(e.value);
+         };
+	}
+
+	function listAllWithMichael() {
+	  var range = IDBKeyRange.only("Michael");
+
+      var store = db.transaction("Items").objectStore("Items");
+
+      var index = store.index("key");
+      document.getElementById("elementsSaved").innerHTML = "";
+
+      index.openCursor(range).onsuccess = function (event) {
+      	var cursor = event.target.result;
+      	if(cursor) {
+      		item = cursor.value;
+	         var jsonStr = JSON.stringify(item);
+	         document.getElementById("elementsSaved").innerHTML = 
+	         	document.getElementById("elementsSaved").innerHTML + jsonStr + "<br/>";
+	         cursor.continue();
+      	}
+      }
+
+      // index.get(range).onsuccess = function(evt) {
+      //    var item = evt.target.result;
+      //    var jsonStr = JSON.stringify(item);
+      //    document.getElementById("elementsSaved").innerHTML = jsonStr;
+      // }
+	}
+>>>>>>> Stashed changes
 </script>
 
 </body>
